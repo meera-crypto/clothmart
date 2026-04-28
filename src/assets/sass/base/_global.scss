@@ -16,8 +16,8 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: $font-regular;
-  font-size: 14px;
+  font-family: var(--font-secondary);
+  font-size: var(--fs-s);
   min-height: 100%;
   letter-spacing: -1%;
 }
@@ -25,30 +25,30 @@ body {
 .container {
   padding-left: toRem(15);
   padding-right: toRem(15);
-  margin: auto;  
-  
+  margin: auto;
+
   max-width: toRem(1236);
-  @include desktop-xs(){
-    max-width: toRem(1020); 
+  @include desktop-xs() {
+    max-width: toRem(1020);
   }
-  @include tablet-lg(){
+  @include tablet-lg() {
     max-width: toRem(916);
   }
-  @include tablet-md(){
+  @include tablet-md() {
     max-width: toRem(800);
   }
-  @include tablet-sm(){
+  @include tablet-sm() {
     max-width: toRem(800);
   }
-  @include mobile-lg(){
+  @include mobile-lg() {
     max-width: toRem(780);
   }
-  @include mobile-md(){
+  @include mobile-md() {
     max-width: toRem(780);
   }
-  @include mobile-sm(){
+  @include mobile-sm() {
     max-width: toRem(780);
-  }  
+  }
 }
 
 a,
@@ -57,10 +57,11 @@ a,
   transition: 0.3s all;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--c-primary);
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     color: var(--c-secondary);
   }
 }

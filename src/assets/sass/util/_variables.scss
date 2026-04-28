@@ -4,7 +4,9 @@
 
 // Breakpoints
 $desktop-lg: toRem(1919); // Wide Desktop Screens (Above 1680 - Large Screens)
-$desktop-md: toRem(1620); // Medium Desktop Screens (Like 1480 - Macbook & Macbook Pro)
+$desktop-md: toRem(
+  1620
+); // Medium Desktop Screens (Like 1480 - Macbook & Macbook Pro)
 $desktop-sm: toRem(1420); // Small Desktop Screens
 $desktop-xs: toRem(1360); // Small Desktop Screens
 
@@ -22,30 +24,19 @@ $mobile-sm: toRem(540); // Mobile Portrait
 $mainlink-assets-path: "/dist";
 $mainlink-font-path: "../fonts";
 
-/*
-* Fonts
-*/
-
-$font-header:  'SFProDisplay-Heavy';
-$font-regular: 'SFProText-Regular'; 
-$font-medium: 'SFProText-Medium'; 
-$font-semibold: 'SFProText-Semibold'; 
-$font-bold: "SFProText-BoldItalic"; 
-
-/*
- * Base colors
-*/
-
 // Theme colours
 :root {
-    --c-primary: #e86a92;
-    --c-secondary: #2b2d42;
-    --c-black: #000000;
-    --c-white: #ffffff;
-    --bs-primary: var(--c-primary);
-    --bs-secondary: var(--c-secondary);
-    --swiper-navigation-size: 30px;
-    --swiper-theme-color: var(--c-black);
-    --swiper-navigation-color: var(--c-black);
-    --swiper-pagination-color: var(--c-black);
+  --font-primary: "ArchitectsDaughter", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  --c-primary: #000000;
+  --c-secondary: #ffffff;
+
+  --c-grey: #eeeeee;
+  --c-neutral: #f6f6f6;
+  --c-neutral-dark: #f5f5f5;
+
+  --c-red: #ff0000;
+
+  --c-text: #717171;
 }
