@@ -17,9 +17,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-secondary);
-  font-size: var(--fs-s);
+  background-color: var(--c-secondary);
   min-height: 100%;
   letter-spacing: -1%;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
 }
 
 h1 {
@@ -27,9 +37,8 @@ h1 {
 }
 
 .container {
-  width: min(1400px, 90%);
+  width: min(1200px, 90%);
   margin: 0 auto;
-  padding: 19px 32px;
 }
 
 a,
@@ -55,4 +64,12 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+input {
+  background-color: none;
+}
+
+.icon-arrowdown{
+  font-size: 6px;
 }
