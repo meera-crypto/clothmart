@@ -1,35 +1,21 @@
 <header class="header sticky-top">
   <div class="container">
-    <div class="header-inner">
-      <div class="header-item-left">
-        <a class="header-logo" href="./index.html">
-          <img src="/uploads/logo.svg" alt="logo" />
-        </a>
-      </div>
-      <div class="header-item-center">
-        <form class="header-search" action="#" method="get">
-          <select
-            class="header-search-filter"
-            name="category"
-            aria-label="Filter category"
-          >
-            <option value="all">All Categories</option>
-            <option value="women">Women</option>
-            <option value="men">Men</option>
-            <option value="kids">Kids</option>
+    <div class="header-top">
+      <img src="/uploads/logo.svg" alt="logo" />
+      <div class="search-filter">
+        <div class="filter-dropdown">
+          <select>
+            <option>All</option>
+            <option>Design</option>
+            <option>Development</option>
+            <option>Marketing</option>
           </select>
-          <input
-            class="header-search-input"
-            type="search"
-            name="q"
-            placeholder="Search products"
-            aria-label="Search products"
-          />
-          <button class="header-search-button" type="submit">Search</button>
-        </form>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+        </div>
       </div>
-      <div class="header-item-right"></div>
     </div>
-    <partial src="nav.html"></partial>
   </div>
+  <partial src="nav.html"> </partial>
 </header>

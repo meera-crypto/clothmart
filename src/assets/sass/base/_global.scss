@@ -22,32 +22,33 @@ body {
   letter-spacing: -1%;
 }
 
+h1 {
+  font-family: var(--font-primary);
+}
 .container {
-  padding-left: toRem(15);
-  padding-right: toRem(15);
-  margin: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 19px 32px;
 
-  max-width: toRem(1236);
-  @include desktop-xs() {
-    max-width: toRem(1020);
+  // Small mobile (≥ 393px)
+  @media (min-width: 393px) {
+    max-width: toRem(360);
   }
-  @include tablet-lg() {
-    max-width: toRem(916);
-  }
-  @include tablet-md() {
+
+  // Tablet (≥ 744px)
+  @media (min-width: 744px) {
     max-width: toRem(800);
   }
-  @include tablet-sm() {
-    max-width: toRem(800);
+
+  // Desktop (≥ 1023px)
+  @media (min-width: 1023px) {
+    max-width: toRem(960);
   }
-  @include mobile-lg() {
-    max-width: toRem(780);
-  }
-  @include mobile-md() {
-    max-width: toRem(780);
-  }
-  @include mobile-sm() {
-    max-width: toRem(780);
+
+  // Large screens
+  @media (min-width: 1280px) {
+    max-width: toRem(500);
   }
 }
 
@@ -59,11 +60,17 @@ a,
 
 a {
   text-decoration: none;
-  color: var(--c-primary);
+  color: var(--c-secondary);
   &:hover,
   &:focus {
-    color: var(--c-secondary);
+    color: var(--c-primary);
   }
+  font-size: var(--fs-s);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {

@@ -1,11 +1,4 @@
-.footer{
-    width: 100%;
-}
-
-.social-icons{
-    li{
-        &+ li{
-            margin-left: 15px;
-        }
-    }
+.footer {
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
 }
