@@ -89,7 +89,9 @@
   @font-face {
     font-family: "#{$variant}";
     src: url("#{$font-full-path}-#{$type}.eot");
-    src: local("#{$variant} #{$type}"), local("#{$variant}-#{$type}"),
+    src:
+      local("#{$variant} #{$type}"),
+      local("#{$variant}-#{$type}"),
       url("#{$font-full-path}-#{$type}.eot?#iefix") format("embedded-opentype"),
       url("#{$font-full-path}-#{$type}.woff2") format("woff2"),
       url("#{$font-full-path}-#{$type}.woff") format("woff"),
@@ -103,7 +105,9 @@
   @font-face {
     font-family: "#{$variant}-#{$type}";
     src: url("#{$font-full-path}-#{$type}.eot");
-    src: local("#{$variant} #{$type}"), local("#{$variant}-#{$type}"),
+    src:
+      local("#{$variant} #{$type}"),
+      local("#{$variant}-#{$type}"),
       url("#{$font-full-path}-#{$type}.eot?#iefix") format("embedded-opentype"),
       url("#{$font-full-path}-#{$type}.woff2") format("woff2"),
       url("#{$font-full-path}-#{$type}.woff") format("woff"),
@@ -119,8 +123,7 @@
 */
 
 @function toRem($value) {
-  $remValue: math.div($value, 16) + toRem;
-  @return $remValue;
+  @return math.div($value, 16) * 1rem;
 }
 
 /**

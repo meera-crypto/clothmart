@@ -1,14 +1,22 @@
-.btn{
-    &.with-icon{
-        font-size: 1.75rem;
-        line-height: 1;
-    }
-    &.btn-primary{
-        background-color: var(--c-primary);
-        border-color: var(--c-primary);
-    }
-    &.btn-secondary{
-        background-color: var(--c-secondary);
-        border-color: var(--c-secondary);
-    }
+.btn {
+  font-size: var(--fs-l);
+  transition: all 0.5s ease;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--c-primary);
+  border: solid 1px var(--c-primary);
+}
+
+.btn-secondary {
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+  border: solid 1px var(--c-primary);
+}
+
+.btn-primary:hover{
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+  border: solid 1px var(--c-primary);
 }

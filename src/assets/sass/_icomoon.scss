@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon,
+[class^="icon-"],
+[class*=" icon-"] {
+  /* Use !important to prevent extensions from overriding this font. */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.palette0 {
+  font-palette: --palette0;
+  color: currentColor;
+}
+.icon-favorite-white:before {
+  content: "\f00b";
+}
+.icon-customer-support:before {
+  content: "\f007";
+}
+.icon-Vector:before {
+  content: "\f000";
+}
+.icon-star:before {
+  content: "\f001";
+}
+.icon-shipping:before {
+  content: "\f002";
+}
+.icon-search:before {
+  content: "\f003";
+}
+.icon-money-back:before {
+  content: "\f004";
+}
+.icon-favorite:before {
+  content: "\f005";
+}
+.icon-menu:before {
+  content: "\f006";
+}
+.icon-cart:before {
+  content: "\f008";
+}
+.icon-arrowdown:before {
+  content: "\f009";
+}
+.icon-arrowdown-white:before {
+  content: "\f00a";
+}

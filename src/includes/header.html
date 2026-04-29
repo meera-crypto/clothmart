@@ -1,16 +1,30 @@
 <header class="header sticky-top">
-    <div class="container">
-        <div class="header-inner">
-            <div class="header-item-left">
-                <a href="./index.html" class="brand">Brand</a>
-            </div>
-            <!-- Section: Navbar Menu -->
-            <div class="header-item-right">
-                <partial src="nav.html"></partial>
-                <button type="button" class="menu-mobile-trigger btn with-icon">
-                    <i class="icon ion-android-menu"></i>
-                </button>
-            </div>
+  <div class="container">
+    <div class="header-top">
+      <img src="/uploads/logo.svg" alt="logo" />
+      <div class="search-filter">
+        <div class="filter-dropdown">
+          <select>
+            <option>All</option>
+            <option>Design</option>
+            <option>Development</option>
+            <option>Marketing</option>
+          </select>
+          <span class="icon-arrowdown"></span>
         </div>
+        <div class="search-box">
+          <form ><input id="search-input" type="text" placeholder="Search..." /><span class="icon-search"></span></form>
+        </div>
+      </div>
+      <div class="mobile-header-actions">
+        <button class="mobile-header-action" type="button" aria-label="Search">
+          <span class="icon-search"></span>
+        </button>
+        <a class="mobile-header-action" href="#" aria-label="Cart">
+          <span class="icon-cart"></span>
+        </a>
+      </div>
     </div>
+  </div>
+  <partial src="nav.html"> </partial>
 </header>
