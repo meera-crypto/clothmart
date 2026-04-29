@@ -16,7 +16,7 @@ const sassOptions = {
   quietDeps: true,
 };
 const htmlmin = require("gulp-htmlmin");
-const cssmin = require("gulp-cssmin");
+const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
@@ -56,7 +56,7 @@ function app_css() {
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(gulpIf(!isProd, sourcemaps.write()))
-    .pipe(gulpIf(isProd, cssmin()))
+    .pipe(gulpIf(isProd, cleanCSS()))
     .pipe(concat("app.min.css"))
     .pipe(gulp.dest("dist/assets/css/"));
 }
@@ -67,7 +67,7 @@ function plugins_css() {
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(gulpIf(!isProd, sourcemaps.write()))
-    .pipe(gulpIf(isProd, cssmin()))
+    .pipe(gulpIf(isProd, cleanCSS()))
     .pipe(concat("plugins.min.css"))
     .pipe(gulp.dest("dist/assets/css/"));
 }
