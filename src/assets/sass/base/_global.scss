@@ -54,10 +54,6 @@ a,
 a {
   text-decoration: none;
   color: var(--c-secondary);
-  &:hover,
-  &:focus {
-    color: var(--c-primary);
-  }
   font-size: var(--fs-s);
 }
 
@@ -74,7 +70,7 @@ input {
   background-color: none;
 }
 
-.icon-arrowdown{
+.icon-arrowdown {
   font-size: 5px;
 }
 

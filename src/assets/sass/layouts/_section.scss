@@ -1,3 +1,7 @@
-:where(header, section, main, footer) + :where(header, section, main, footer) {
+main > * + * {
+  margin-top: 2.375rem;
+}
+
+main + footer {
   margin-top: 2.375rem;
 }
