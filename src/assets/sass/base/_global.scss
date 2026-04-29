@@ -25,31 +25,11 @@ body {
 h1 {
   font-family: var(--font-primary);
 }
+
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  width: min(1400px, 90%);
+  margin: 0 auto;
   padding: 19px 32px;
-
-  // Small mobile (≥ 393px)
-  @media (min-width: 393px) {
-    max-width: toRem(360);
-  }
-
-  // Tablet (≥ 744px)
-  @media (min-width: 744px) {
-    max-width: toRem(800);
-  }
-
-  // Desktop (≥ 1023px)
-  @media (min-width: 1023px) {
-    max-width: toRem(960);
-  }
-
-  // Large screens
-  @media (min-width: 1280px) {
-    max-width: toRem(500);
-  }
 }
 
 a,
