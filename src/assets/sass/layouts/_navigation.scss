@@ -3,34 +3,114 @@
   color: var(--c-secondary);
 }
 
-.nav-list {
-  padding-top: 0;
-  padding-bottom: 0;
+.menu-desktop {
+  display: none;
 }
 
-.nav-links ul li a {
+.mobile-bottom-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: var(--c-primary);
+  border-top: 1px solid var(--c-charcoal);
+  padding: 0.5rem 1rem calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+.mobile-bottom-nav__links {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.mobile-bottom-nav__item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-height: 3.75rem;
+  color: var(--c-secondary);
+  font-size: var(--fs-xs);
+  text-align: center;
+}
+
+.mobile-bottom-nav__item:hover,
+.mobile-bottom-nav__item:focus {
   color: var(--c-secondary);
 }
 
-.nav-links ul {
-  margin: 0;
-  padding: 0;
+.mobile-bottom-nav__item .icon-menu,
+.mobile-bottom-nav__item .icon-favorite-white,
+.mobile-bottom-nav__item .icon-cart {
+  font-size: var(--fs-m);
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
+@media (min-width: 768px) {
+  .menu-desktop {
+    display: block;
+  }
+
+  .mobile-bottom-nav {
+    display: none;
+  }
+
+  .nav-list {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-links ul li a {
+    color: var(--c-secondary);
+  }
+
+  .nav-links ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: stretch;
+  }
+
+  .nav-links ul {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .nav-links ul li {
+    display: flex;
+    height: 100%;
+  }
+
+  .nav-links ul li a {
+    font-size: var(--fs-s);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+  }
+
+  .nav-links > ul:first-child > li:first-child > a {
+    background-color: var(--c-charcoal);
+    padding: 0 1rem;
+  }
 }
 
-.nav-links ul {
-  display: flex;
-  gap: 15px;
-}
+@media (min-width: 768px) and (max-width: 1022px) {
+  .nav-links > ul:first-child > li:not(:first-child) {
+    display: none;
+  }
 
-.nav-links ul li a {
-  font-size: var(--fs-s);
+  .nav-links > ul:last-child {
+    gap: 30px;
+  }
 }
-

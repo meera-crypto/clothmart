@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav class="menu menu-desktop">
   <div class="container nav-list">
     <div class="nav-links">
       <ul>
@@ -26,7 +26,11 @@
         <li><a href="">CONTACT US</a></li>
       </ul>
       <ul>
-        <li><a href="">LOGIN/REGISTER</a></li>
+        <li>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#authModal"
+            >LOGIN/REGISTER</a
+          >
+        </li>
         <li>
           <a href=""><span class="icon-favorite-white"></span></a>
         </li>
@@ -35,5 +39,30 @@
         </li>
       </ul>
     </div>
+  </div>
+</nav>
+
+<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+  <div class="mobile-bottom-nav__links">
+    <a href="" class="mobile-bottom-nav__item">
+      <span class="icon-menu"></span>
+      <span>Browse Categories</span>
+    </a>
+    <a
+      href="#"
+      class="mobile-bottom-nav__item"
+      data-bs-toggle="modal"
+      data-bs-target="#authModal"
+    >
+      <span>Login/Signup</span>
+    </a>
+    <a href="" class="mobile-bottom-nav__item">
+      <span class="icon-favorite-white"></span>
+      <span>Favorites</span>
+    </a>
+    <a href="" class="mobile-bottom-nav__item">
+      <span class="icon-cart"></span>
+      <span>Cart</span>
+    </a>
   </div>
 </nav>

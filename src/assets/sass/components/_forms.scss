@@ -39,4 +39,40 @@ select{
     background:var(--c-white) url(../../../images/icons/select_icon.png) no-repeat center right;
     background-size: 24px auto;
 }
+
+.auth-modal .modal-dialog {
+    width: min(100% - 2rem, 32rem);
+    margin: 1rem auto;
+}
+
+.auth-modal .modal-content {
+    border-radius: 0;
+}
+
+.auth-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.auth-modal .form-control {
+    width: 100%;
+    margin-top: 0.5rem;
+    border: toRem(1) solid var(--c-grey);
+    background-color: var(--c-secondary);
+}
+
+.auth-modal__signup {
+    margin: 1rem 0 0;
+    text-align: center;
+}
+
+.auth-modal__signup a {
+    color: var(--c-primary);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .auth-modal .modal-body {
+        padding: 2rem;
+    }
+}
  
