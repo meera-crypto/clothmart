@@ -98,7 +98,9 @@
     height: 100%;
     gap: 10px;
     position: relative;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
   }
 
   .nav-links ul li a::after {
