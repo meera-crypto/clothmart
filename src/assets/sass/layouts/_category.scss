@@ -71,3 +71,17 @@
     display: none;
   }
 }
+
+@media (min-width: 1024px) {
+  .category-card .btn-category {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .category-card:hover .btn-category,
+  .category-card:focus-within .btn-category {
+    opacity: 1;
+    visibility: visible;
+  }
+}

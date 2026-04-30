@@ -15,7 +15,6 @@
 .footer .container > div > * {
   width: 100%;
   text-align: left;
-
 }
 
 .footer .container > div > :nth-child(1) {
@@ -24,6 +23,10 @@
 
 .footer .container > div > :nth-child(n + 2) {
   grid-column: auto;
+}
+
+.copyright-content {
+  border-top: solid 1px var(--c-secondary);
 }
 
 @media (min-width: 767px) {
