@@ -1,0 +1,398 @@
+<section>
+  <div class="container">
+    <div class="best-sellers">
+      <h2>Best Selling Products</h2>
+      <select
+        class="best-sellers__filter-select"
+        aria-label="Best selling product filter"
+      >
+        <option selected>All</option>
+        <option>Casual Shirts</option>
+        <option>Formal Shirts</option>
+        <option>T-Shirts</option>
+        <option>Pants</option>
+        <option>Jeans</option>
+        <option>Hoodie</option>
+      </select>
+      <div
+        class="best-sellers__filters"
+        aria-label="Best selling product filters"
+      >
+        <button class="btn btn-primary" type="button">All</button>
+        <button class="btn btn-primary" type="button">Casual Shirts</button>
+        <button class="btn btn-primary" type="button">Formal Shirts</button>
+        <button class="btn btn-primary" type="button">T-Shirts</button>
+        <button class="btn btn-primary" type="button">Pants</button>
+        <button class="btn btn-primary" type="button">Jeans</button>
+        <button class="btn btn-primary" type="button">Hoodie</button>
+      </div>
+      <div class="best-sellers__grid">
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-hoodie.webp    1x,
+                  /uploads/lp-hoodie_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="/uploads/lp-hoodie.jpg 1x, /uploads/lp-hoodie_2x.jpg 2x"
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-hoodie.jpg"
+                alt="Hoodie"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add hoodie to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.7</span>
+              <span class="icon-star"></span>
+              <span>812</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Louis Philippe</h3>
+            <p>Relaxed Fit Cotton Hoodie</p>
+            <div class="product-card__price">
+              <span>Rs. 1299</span>
+              <del>Rs. 2599</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-jean-blue.webp    1x,
+                  /uploads/lp-jean-blue_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  /uploads/lp-jean-blue.jpg    1x,
+                  /uploads/lp-jean-blue_2x.jpg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-jean-blue.jpg"
+                alt="Blue jean"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add blue jean to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.2</span>
+              <span class="icon-star"></span>
+              <span>659</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Louis Philippe</h3>
+            <p>Lightly Washed Slim Fit Jeans</p>
+            <div class="product-card__price">
+              <span>Rs. 999</span>
+              <del>Rs. 1999</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-jean-black.webp    1x,
+                  /uploads/lp-jean-black_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  /uploads/lp-jean-black.jpg    1x,
+                  /uploads/lp-jean-black_2x.jpg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-jean-black.jpg"
+                alt="Black jean"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add black jean to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.5</span>
+              <span class="icon-star"></span>
+              <span>734</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Allen Solly</h3>
+            <p>Black Stretch Skinny Fit Jeans</p>
+            <div class="product-card__price">
+              <span>Rs. 1199</span>
+              <del>Rs. 2399</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-tshirt.webp    1x,
+                  /uploads/lp-tshirt_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="/uploads/lp-tshirt.jpg 1x, /uploads/lp-tshirt_2x.jpg 2x"
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-tshirt.jpg"
+                alt="T-shirt"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add t-shirt to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.4</span>
+              <span class="icon-star"></span>
+              <span>521</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Puma</h3>
+            <p>Logo Print Slim Fit T-Shirt</p>
+            <div class="product-card__price">
+              <span>Rs. 799</span>
+              <del>Rs. 1599</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-shirt-black.webp   1x,
+                  /uploads/lp-shirt-blac_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  /uploads/lp-shirt-black.jpg   1x,
+                  /uploads/lp-shirt-blac_2x.jpg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-shirt-black.jpg"
+                alt="Black shirt"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add black shirt to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.1</span>
+              <span class="icon-star"></span>
+              <span>438</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Van Heusen</h3>
+            <p>Solid Regular Fit Formal Shirt</p>
+            <div class="product-card__price">
+              <span>Rs. 1099</span>
+              <del>Rs. 2199</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-shirt-stripe.webp    1x,
+                  /uploads/lp-shirt-stripe_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  /uploads/lp-shirt-stripe.jpg    1x,
+                  /uploads/lp-shirt-stripe_2x.jpg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-shirt-stripe.jpg"
+                alt="Striped shirt"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add striped shirt to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.6</span>
+              <span class="icon-star"></span>
+              <span>907</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Peter England</h3>
+            <p>Striped Slim Fit Casual Shirt</p>
+            <div class="product-card__price">
+              <span>Rs. 899</span>
+              <del>Rs. 1799</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="/uploads/lp-dress.webp 1x, /uploads/lp-dress_2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                srcset="/uploads/lp-dress.jpg 1x, /uploads/lp-dress_2x.jpg 2x"
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-dress.jpg"
+                alt="Dress"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add dress to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.3</span>
+              <span class="icon-star"></span>
+              <span>612</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Only</h3>
+            <p>Floral Print Fit And Flare Dress</p>
+            <div class="product-card__price">
+              <span>Rs. 1499</span>
+              <del>Rs. 2999</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__media">
+            <picture>
+              <source
+                srcset="
+                  /uploads/lp-tshirt-green.webp    1x,
+                  /uploads/lp-tshirt-green_2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  /uploads/lp-tshirt-green.jpg    1x,
+                  /uploads/lp-tshirt-green_2x.jpg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="/uploads/lp-tshirt-green.jpg"
+                alt="Green t-shirt"
+                width="256"
+                height="336"
+              />
+            </picture>
+            <button
+              class="product-card__favorite"
+              type="button"
+              aria-label="Add green t-shirt to wishlist"
+            >
+              <span class="icon-favorite"></span>
+            </button>
+            <div class="product-card__rating">
+              <span>4.2</span>
+              <span class="icon-star"></span>
+              <span>659</span>
+            </div>
+          </div>
+          <div class="product-card__details">
+            <h3>Louis Philippe</h3>
+            <p>Lightly Washed Slim Fit Jeans</p>
+            <div class="product-card__price">
+              <span>Rs. 999</span>
+              <del>Rs. 1999</del>
+              <span class="product-card__discount">(50% OFF)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <button class="btn btn-primary">Load More</button>
+    </div>
+  </div>
+</section>

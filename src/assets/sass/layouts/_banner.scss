@@ -1,1 +1,53 @@
- 
+.banner-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.banner-media picture,
+.banner-media img {
+  display: block;
+}
+
+.banner-media picture {
+  height: 100%;
+}
+
+.banner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.banner-text p,
+.banner-text h3 {
+  margin-top: 0;
+}
+
+.banner-text .btn {
+  align-self: flex-start;
+  padding: 0.75rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .banner-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .banner-media,
+  .banner-text {
+    min-height: 100%;
+  }
+
+  .banner-text {
+    padding: clamp(2rem, 5vw, 4rem);
+    background-color: var(--c-neutral-dark);
+  }
+}
