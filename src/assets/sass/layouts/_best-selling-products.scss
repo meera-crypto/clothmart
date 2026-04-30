@@ -1,0 +1,40 @@
+.best-sellers {
+  text-align: center;
+}
+
+.best-sellers h2 {
+  margin-top: 0;
+}
+
+.best-sellers__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.best-sellers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 256px));
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.product-card picture,
+.product-card img {
+  display: block;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 256 / 336;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .best-sellers__grid {
+    grid-template-columns: repeat(4, minmax(0, 256px));
+  }
+}
