@@ -1,0 +1,48 @@
+.customer-review {
+  text-align: center;
+}
+
+.customer-review p {
+  text-align: center;
+}
+
+.customer-review__slider {
+  overflow: hidden;
+}
+
+.customer-review__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.customer-review__track::-webkit-scrollbar {
+  display: none;
+}
+
+.customer-review__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.customer-review__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.customer-review__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.customer-review__dot.is-active {
+  background-color: var(--c-primary);
+}
