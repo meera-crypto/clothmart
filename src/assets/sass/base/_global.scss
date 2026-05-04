@@ -26,6 +26,13 @@ body {
   padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
 
+.gap-16 {
+  gap: var(--space-16);
+}
+.gap-32 {
+  gap: var(--space-32);
+}
+
 .skip-link {
   position: fixed;
   top: 1rem;
