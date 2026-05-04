@@ -133,6 +133,11 @@
   font-weight: 400;
 }
 
+.load-more {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--c-primary);
+}
+
 @media (min-width: 768px) {
   .best-sellers__filter-select {
     display: none;

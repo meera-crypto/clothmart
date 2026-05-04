@@ -20,6 +20,7 @@ body {
   background-color: var(--c-secondary);
   min-height: 100%;
   letter-spacing: -1%;
+  margin: 0;
 }
 
 body {
@@ -75,6 +76,21 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-medium);
+}
+h4 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+p {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-medium);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 .container {
