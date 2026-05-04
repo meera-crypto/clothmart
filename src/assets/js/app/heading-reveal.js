@@ -1,13 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const headings = document.querySelectorAll('#main-content h2, #main-content h3');
+document.addEventListener("DOMContentLoaded", function () {
+  const headings = document.querySelectorAll(
+    "#main-content h2, #main-content h3",
+  );
 
   if (!headings.length) {
     return;
   }
 
-  if (!('IntersectionObserver' in window)) {
+  if (!("IntersectionObserver" in window)) {
     headings.forEach(function (heading) {
-      heading.classList.add('is-visible');
+      heading.classList.add("is-visible");
     });
     return;
   }
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
         }
 
-        entry.target.classList.add('is-visible');
+        entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       });
     },
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   headings.forEach(function (heading) {
-    heading.classList.add('heading-reveal');
+    heading.classList.add("heading-reveal");
     headingObserver.observe(heading);
   });
 });
