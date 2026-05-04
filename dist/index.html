@@ -15,69 +15,71 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="header sticky-top">
     <div class="container">
       <div class="header-top">
-        <img src="/uploads/logo.svg" alt="logo" />
+        <img src="/uploads/logo.svg" alt="Clothmart" />
         <div class="search-filter">
           <div class="filter-dropdown">
-            <select>
+            <select aria-label="Product category">
               <option>All</option>
               <option>Design</option>
               <option>Development</option>
               <option>Marketing</option>
             </select>
-            <span class="icon-arrowdown"></span>
+            <span class="icon-arrowdown" aria-hidden="true"></span>
 
           </div>
           <div class="search-box">
-            <form>
-              <input id="search-input" type="text" placeholder="Search..." />
-              <span class="icon-search"></span>
+            <form role="search" aria-label="Site search">
+              <input id="search-input" type="search" placeholder="Search..." aria-label="Search products" />
+              <span class="icon-search" aria-hidden="true"></span>
 
             </form>
           </div>
         </div>
         <div class="mobile-header-actions">
           <button class="mobile-header-action" type="button" aria-label="Search">
-            <span class="icon-search"></span>
+            <span class="icon-search" aria-hidden="true"></span>
 
           </button>
           <a class="mobile-header-action" href="#" aria-label="Cart">
-            <span class="icon-cart"></span>
+            <span class="icon-cart" aria-hidden="true"></span>
           </a>
 
         </div>
       </div>
     </div>
-    <nav class="menu menu-desktop">
+    <nav class="menu menu-desktop" aria-label="Primary navigation">
       <div class="container nav-list">
         <div class="nav-links">
           <ul>
             <li>
-              <a href="">
-                <span class="icon-menu"></span>BROWSE CATEGORIES
-                <span class="icon-arrowdown-white icon-arrowdown"></span>
+              <a href="#categories">
+                <span class="icon-menu" aria-hidden="true"></span>BROWSE CATEGORIES
+                <span class="icon-arrowdown-white icon-arrowdown" aria-hidden="true"></span>
               </a>
 
             </li>
             <li>
-              <a href="">HOME <span class="icon-arrowdown-white icon-arrowdown"></span>
+              <a href="#main-content">HOME <span class="icon-arrowdown-white icon-arrowdown" aria-hidden="true"></span>
               </a>
 
             </li>
             <li>
-              <a href="">SHOPE <span class="icon-arrowdown-white icon-arrowdown"></span>
+              <a href="#best-selling-products">SHOP <span class="icon-arrowdown-white icon-arrowdown" aria-hidden="true"></span>
               </a>
 
             </li>
             <li>
-              <a href="">BLOG <span class="icon-arrowdown-white icon-arrowdown"></span>
+              <a href="#instagram">BLOG <span class="icon-arrowdown-white icon-arrowdown" aria-hidden="true"></span>
               </a>
 
             </li>
             <li>
-              <a href="">CONTACT US</a>
+              <a href="#site-footer">CONTACT US</a>
 
             </li>
           </ul>
@@ -86,14 +88,14 @@
               <a href="#" data-bs-toggle="modal" data-bs-target="#authModal">LOGIN/REGISTER</a>
             </li>
             <li>
-              <a href="">
-                <span class="icon-favorite-white"></span>
+              <a href="#" aria-label="Favorites">
+                <span class="icon-favorite-white" aria-hidden="true"></span>
               </a>
 
             </li>
             <li>
-              <a href="">
-                <span class="icon-cart"></span>
+              <a href="#" aria-label="Cart">
+                <span class="icon-cart" aria-hidden="true"></span>
               </a>
 
             </li>
@@ -103,50 +105,50 @@
     </nav>
     <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
       <div class="mobile-bottom-nav__links">
-        <a href="" class="mobile-bottom-nav__item">
-          <span class="icon-menu"></span>
+        <a href="#categories" class="mobile-bottom-nav__item">
+          <span class="icon-menu" aria-hidden="true"></span>
           <span>Categories</span>
         </a>
         <a href="#" class="mobile-bottom-nav__item" data-bs-toggle="modal" data-bs-target="#authModal">
-          <span class="icon-login"></span>
+          <span class="icon-login" aria-hidden="true"></span>
           <span>Account</span>
         </a>
-        <a href="" class="mobile-bottom-nav__item">
-          <span class="icon-favorite-white"></span>
+        <a href="#" class="mobile-bottom-nav__item">
+          <span class="icon-favorite-white" aria-hidden="true"></span>
           <span>Favorites</span>
         </a>
-        <a href="" class="mobile-bottom-nav__item">
-          <span class="icon-cart"></span>
+        <a href="#" class="mobile-bottom-nav__item">
+          <span class="icon-cart" aria-hidden="true"></span>
           <span>Cart</span>
         </a>
 
       </div>
     </nav>
   </header>
-  <main class="page-wrap">
-    <section class="hero">
+  <main id="main-content" class="page-wrap" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero__layout">
           <div class="hero__content">
             <div class="hero__card">
               <p class="hero__eyebrow">SUMMER SALE 50% OFF</p>
-              <h1>Design For Beauty</h1>
+              <h1 id="hero-title">Design For Beauty</h1>
 
               <p class="hero__description">You Can Have Anything You Want In Life You Dress For It.</p>
-              <button class="btn btn-primary">All collection</button>
+              <button class="btn btn-primary" type="button">All collection</button>
             </div>
           </div>
           <div class="hero__media">
             <picture>
               <source srcset="/uploads/hero-image.webp 1x, /uploads/hero-image_2x.webp 2x" type="image/webp" />
               <source srcset="/uploads/hero-image.jpg 1x, /uploads/hero-image_2x.jpg 2x" type="image/jpeg" />
-              <img class="hero__image" src="/uploads/hero-image.jpg" alt="Hero image" />
+              <img class="hero__image" src="/uploads/hero-image.jpg" alt="Model wearing Clothmart summer collection" />
             </picture>
           </div>
         </div>
       </div>
     </section>
-    <section class="category">
+    <section id="categories" class="category" aria-label="Shop by category">
       <div class="container">
         <div class="category-cards" data-category-slider>
           <div class="category-card">
@@ -194,10 +196,10 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="best-selling-products" aria-labelledby="best-selling-products-title">
       <div class="container">
         <div class="best-sellers">
-          <h2>Best Selling Products</h2>
+          <h2 id="best-selling-products-title">Best Selling Products</h2>
 
           <select class="best-sellers__filter-select" aria-label="Best selling product filter">
             <option selected>All</option>
@@ -229,14 +231,14 @@
                   <img src="/uploads/lp-hoodie.jpg" alt="Hoodie" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add hoodie to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.7</span>
-                  <span class="icon-star"></span>
-                  <span>812</span>
+                <div class="product-card__rating" aria-label="Rated 4.7 out of 5 from 812 reviews">
+                  <span aria-hidden="true">4.7</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">812</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -265,14 +267,14 @@
                   <img src="/uploads/lp-jean-blue.jpg" alt="Blue jean" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add blue jean to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.2</span>
-                  <span class="icon-star"></span>
-                  <span>659</span>
+                <div class="product-card__rating" aria-label="Rated 4.2 out of 5 from 659 reviews">
+                  <span aria-hidden="true">4.2</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">659</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -301,14 +303,14 @@
                   <img src="/uploads/lp-jean-black.jpg" alt="Black jean" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add black jean to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.5</span>
-                  <span class="icon-star"></span>
-                  <span>734</span>
+                <div class="product-card__rating" aria-label="Rated 4.5 out of 5 from 734 reviews">
+                  <span aria-hidden="true">4.5</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">734</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -334,14 +336,14 @@
                   <img src="/uploads/lp-tshirt.jpg" alt="T-shirt" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add t-shirt to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.4</span>
-                  <span class="icon-star"></span>
-                  <span>521</span>
+                <div class="product-card__rating" aria-label="Rated 4.4 out of 5 from 521 reviews">
+                  <span aria-hidden="true">4.4</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">521</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -370,14 +372,14 @@
                   <img src="/uploads/lp-shirt-black.jpg" alt="Black shirt" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add black shirt to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.1</span>
-                  <span class="icon-star"></span>
-                  <span>438</span>
+                <div class="product-card__rating" aria-label="Rated 4.1 out of 5 from 438 reviews">
+                  <span aria-hidden="true">4.1</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">438</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -406,14 +408,14 @@
                   <img src="/uploads/lp-shirt-stripe.jpg" alt="Striped shirt" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add striped shirt to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.6</span>
-                  <span class="icon-star"></span>
-                  <span>907</span>
+                <div class="product-card__rating" aria-label="Rated 4.6 out of 5 from 907 reviews">
+                  <span aria-hidden="true">4.6</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">907</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -436,14 +438,14 @@
                   <img src="/uploads/lp-dress.jpg" alt="Dress" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add dress to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.3</span>
-                  <span class="icon-star"></span>
-                  <span>612</span>
+                <div class="product-card__rating" aria-label="Rated 4.3 out of 5 from 612 reviews">
+                  <span aria-hidden="true">4.3</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">612</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -472,14 +474,14 @@
                   <img src="/uploads/lp-tshirt-green.jpg" alt="Green t-shirt" width="256" height="336" />
                 </picture>
                 <button class="product-card__favorite" type="button" aria-label="Add green t-shirt to wishlist">
-                  <span class="icon-favorite"></span>
+                  <span class="icon-favorite" aria-hidden="true"></span>
 
                 </button>
-                <div class="product-card__rating">
-                  <span>4.2</span>
-                  <span class="icon-star"></span>
-                  <span>659</span>
+                <div class="product-card__rating" aria-label="Rated 4.2 out of 5 from 659 reviews">
+                  <span aria-hidden="true">4.2</span>
+                  <span class="icon-star" aria-hidden="true"></span>
 
+                  <span aria-hidden="true">659</span>
                 </div>
               </div>
               <div class="product-card__details">
@@ -495,7 +497,7 @@
               </div>
             </article>
           </div>
-          <button class="btn btn-primary">Load More</button>
+          <button class="btn btn-primary" type="button">Load More</button>
         </div>
       </div>
     </section>
@@ -503,33 +505,33 @@
       <div class="container">
         <div class="services-offered">
           <div class="service">
-            <span class="icon-shipping service-icon"></span>
+            <span class="icon-shipping service-icon" aria-hidden="true"></span>
 
             <h3>FREE SHIPPING</h3>
-            <span class="icon-star"></span>
+            <span class="icon-star" aria-hidden="true"></span>
 
             <p>ENJOY FREE SHIPPING ON ALL ORDERS NO MINIMUM PURCHASE REQUIRED.</p>
           </div>
           <div class="service">
-            <span class="icon-customer-support service-icon"></span>
+            <span class="icon-customer-support service-icon" aria-hidden="true"></span>
 
             <h3>24/7 SUPPORT</h3>
-            <span class="icon-star"></span>
+            <span class="icon-star" aria-hidden="true"></span>
 
             <p>OUR TEAM IS AVAILABLE 24/7 TO HELP WITH ANY QUESTIONS OR CONCERNS.</p>
           </div>
           <div class="service">
-            <span class="icon-money-back service-icon"></span>
+            <span class="icon-money-back service-icon" aria-hidden="true"></span>
 
             <h3>MONEY BACK</h3>
-            <span class="icon-star"></span>
+            <span class="icon-star" aria-hidden="true"></span>
 
             <p>WE OFFER A 100% MONEY BACK GUARANTEE FOR YOUR SATISFACTION.</p>
           </div>
         </div>
       </div>
     </section>
-    <section>
+    <section aria-labelledby="sale-event-title">
       <div class="container">
         <div class="banner-content">
           <div class="banner-media">
@@ -544,7 +546,7 @@
           </div>
           <div class="banner-text">
             <p>SALE EVENT</p>
-            <h3>Summer Product Limited Offer - ₹399</h3>
+            <h3 id="sale-event-title">Summer Product Limited Offer - ₹399</h3>
 
             <p>Summer Product Limited Offer - ₹399</p>
             <button class="btn btn-primary" type="button">Shop Now</button>
@@ -552,24 +554,24 @@
         </div>
       </div>
     </section>
-    <section>
+    <section aria-labelledby="customer-reviews-title">
       <div class="container">
         <div class="customer-review">
-          <h2>Customers Reviews</h2>
+          <h2 id="customer-reviews-title">Customers Reviews</h2>
 
           <div class="customer-review__slider" data-review-slider>
             <div class="customer-review__track" data-review-track>
-              <div class="customer-review__slide">
+              <div class="customer-review__slide" aria-label="Customer review from Alex Dope">
                 <p>“As a men Who Value our health, we’re here to do what we do best - roll
                   up our sleeves to get it done right.”</p>
                 <p>Alex Dope</p>
               </div>
-              <div class="customer-review__slide">
+              <div class="customer-review__slide" aria-label="Customer review from Maria Lee">
                 <p>“The fabric quality is excellent and every piece feels comfortable enough
                   to wear all day.”</p>
                 <p>Maria Lee</p>
               </div>
-              <div class="customer-review__slide">
+              <div class="customer-review__slide" aria-label="Customer review from John Smith">
                 <p>“Fast delivery, perfect fit, and the collection made shopping simple from
                   start to finish.”</p>
                 <p>John Smith</p>
@@ -584,13 +586,13 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="instagram" aria-labelledby="instagram-title">
       <div class="container">
         <div class="insta-grid">
-          <h2>Instagram with #April</h2>
+          <h2 id="instagram-title">Instagram with #April</h2>
 
           <div class="insta-grid__gallery">
-            <a class="insta-grid__item insta-grid__item--featured" href="#">
+            <a class="insta-grid__item insta-grid__item--featured" href="#" aria-label="View April Instagram look 1">
               <picture>
                 <source srcset="
                 /uploads/insta-model-1.webp    1x,
@@ -605,7 +607,7 @@
             </a>
 
             <div class="insta-grid__items">
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 2">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-2.webp    1x,
@@ -618,7 +620,7 @@
                   <img src="/uploads/insta-model-2.jpg" width="238" height="237" alt="April Instagram look 2" />
                 </picture>
               </a>
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 3">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-3.webp    1x,
@@ -631,7 +633,7 @@
                   <img src="/uploads/insta-model-3.jpg" width="238" height="237" alt="April Instagram look 3" />
                 </picture>
               </a>
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 4">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-4.webp    1x,
@@ -644,7 +646,7 @@
                   <img src="/uploads/insta-model-4.jpg" width="238" height="237" alt="April Instagram look 4" />
                 </picture>
               </a>
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 5">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-5.webp    1x,
@@ -657,7 +659,7 @@
                   <img src="/uploads/insta-model-5.jpg" width="238" height="237" alt="April Instagram look 5" />
                 </picture>
               </a>
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 6">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-6.webp    1x,
@@ -670,7 +672,7 @@
                   <img src="/uploads/insta-model-6.jpg" width="238" height="237" alt="April Instagram look 6" />
                 </picture>
               </a>
-              <a class="insta-grid__item" href="#">
+              <a class="insta-grid__item" href="#" aria-label="View April Instagram look 7">
                 <picture>
                   <source srcset="
                   /uploads/insta-model-7.webp    1x,
@@ -690,11 +692,11 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer id="site-footer" class="footer">
     <div class="container">
       <div>
         <div class="contact-details">
-          <img src="/uploads/logo-white.svg" alt="" />
+          <img src="/uploads/logo-white.svg" alt="Clothmart" />
           <p>Lorem Is Dolor Sit Amet, Consectetur Adipisicing Elit. Read More</p>
           <ul class="contact-list">
             <li>
@@ -713,19 +715,19 @@
           <p>Company</p>
           <ul>
             <li>
-              <a href="">About Us</a>
+              <a href="#">About Us</a>
 
             </li>
             <li>
-              <a href="">Careers</a>
+              <a href="#">Careers</a>
 
             </li>
             <li>
-              <a href="">Store Locator</a>
+              <a href="#">Store Locator</a>
 
             </li>
             <li>
-              <a href="">Contact Us</a>
+              <a href="#site-footer">Contact Us</a>
 
             </li>
           </ul>
@@ -734,19 +736,19 @@
           <p>Customer Care</p>
           <ul>
             <li>
-              <a href="">Size Guide</a>
+              <a href="#">Size Guide</a>
 
             </li>
             <li>
-              <a href="">Help & FAQs</a>
+              <a href="#">Help & FAQs</a>
 
             </li>
             <li>
-              <a href="">Return My Order</a>
+              <a href="#">Return My Order</a>
 
             </li>
             <li>
-              <a href="">Refer A friend</a>
+              <a href="#">Refer A friend</a>
 
             </li>
           </ul>
@@ -755,19 +757,19 @@
           <p>Terms & Policies</p>
           <ul>
             <li>
-              <a href="">Duties & Taxes</a>
+              <a href="#">Duties & Taxes</a>
 
             </li>
             <li>
-              <a href="">Shipping Info</a>
+              <a href="#">Shipping Info</a>
 
             </li>
             <li>
-              <a href="">Privacy Policy</a>
+              <a href="#">Privacy Policy</a>
 
             </li>
             <li>
-              <a href="">Terms Conditions</a>
+              <a href="#">Terms Conditions</a>
 
             </li>
           </ul>
@@ -776,26 +778,26 @@
           <p>Follow Us</p>
           <ul>
             <li>
-              <a href="">
-                <i class="ion ion-social-instagram"></i> Instagram
+              <a href="#">
+                <i class="ion ion-social-instagram" aria-hidden="true"></i> Instagram
               </a>
 
             </li>
             <li>
-              <a href="">
-                <i class="ion ion-social-facebook"></i> Facebook
+              <a href="#">
+                <i class="ion ion-social-facebook" aria-hidden="true"></i> Facebook
               </a>
 
             </li>
             <li>
-              <a href="">
-                <i class="ion ion-social-twitter"></i> Twitter
+              <a href="#">
+                <i class="ion ion-social-twitter" aria-hidden="true"></i> Twitter
               </a>
 
             </li>
             <li>
-              <a href="">
-                <i class="ion ion-social-youtube"></i> Threads
+              <a href="#">
+                <i class="ion ion-social-youtube" aria-hidden="true"></i> Threads
               </a>
 
             </li>
@@ -808,10 +810,10 @@
         <div>
           <p>© 2024 Vipin Gautam. All Right Reserved</p>
           <div>
-            <img src="uploads/visa.svg" alt="" />
-            <img src="uploads/gpay.svg" alt="" />
-            <img src="uploads/amazon.svg" alt="" />
-            <img src="uploads/paypal.svg" alt="" />
+            <img src="uploads/visa.svg" alt="Visa" />
+            <img src="uploads/gpay.svg" alt="Google Pay" />
+            <img src="uploads/amazon.svg" alt="Amazon Pay" />
+            <img src="uploads/paypal.svg" alt="PayPal" />
           </div>
           <div>
             <p>English(IN)</p>
@@ -833,11 +835,11 @@
           <form>
             <div class="mb-3">
               <label for="auth-email" class="form-label">Email address *</label>
-              <input type="email" class="form-control" id="auth-email" placeholder="Enter your email" />
+              <input type="email" class="form-control" id="auth-email" placeholder="Enter your email" autocomplete="email" required />
             </div>
             <div class="mb-3">
               <label for="auth-password" class="form-label">Password *</label>
-              <input type="password" class="form-control" id="auth-password" placeholder="Enter your password" />
+              <input type="password" class="form-control" id="auth-password" placeholder="Enter your password" autocomplete="current-password" required />
             </div>
             <button type="submit" class="btn btn-dark w-100">Continue</button>
           </form>

@@ -26,6 +26,32 @@ body {
   padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
 
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  transform: translateY(calc(-100% - 2rem));
+  background-color: var(--c-primary);
+  color: var(--c-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-red);
+  outline-offset: 3px;
+}
+
 h1 {
   font-family: var(--font-primary);
   font-size: var(--fs-h1);

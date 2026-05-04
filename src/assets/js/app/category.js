@@ -1,5 +1,8 @@
 const categorySlider = document.querySelector("[data-category-slider]");
 const categoryDots = document.querySelector("[data-category-dots]");
+const categoryPrefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
 
 if (categorySlider && categoryDots) {
   const categoryCards = Array.from(
@@ -20,7 +23,7 @@ if (categorySlider && categoryDots) {
 
     dot.addEventListener("click", () => {
       card.scrollIntoView({
-        behavior: "smooth",
+        behavior: categoryPrefersReducedMotion.matches ? "auto" : "smooth",
         block: "nearest",
         inline: "center",
       });
