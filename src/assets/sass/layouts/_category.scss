@@ -33,6 +33,12 @@
   height: auto;
   object-fit: cover;
   border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover img,
+.category-card:focus-within img {
+  transform: scale(1.06);
 }
 
 .category-card__overlay {
