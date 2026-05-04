@@ -29,6 +29,11 @@
   border-top: solid 1px var(--c-secondary);
 }
 
+.footer-top,
+.copyright-content {
+  padding: 50px 0;
+}
+
 @media (min-width: 767px) {
   .footer .container > div {
     grid-template-columns: repeat(6, minmax(0, 1fr));
