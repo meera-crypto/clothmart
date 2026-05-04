@@ -3,3 +3,4 @@
 //=require app/category.js
 //=require app/hero.js
 //=require app/customer-review.js
+//=require app/heading-reveal.js

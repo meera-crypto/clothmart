@@ -1,6 +1,5 @@
 .category-cards {
   display: flex;
-  gap: clamp(1rem, 2vw, 1.5rem);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -33,6 +32,13 @@
   aspect-ratio: 352 / 449;
   height: auto;
   object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover img,
+.category-card:focus-within img {
+  transform: scale(1.06);
 }
 
 .category-card__overlay {
@@ -47,6 +53,7 @@
   color: var(--c-secondary);
   text-align: center;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35));
+  border-radius: 12px;
 }
 
 .category-card__overlay h3 {
@@ -76,7 +83,9 @@
   .category-card .btn-category {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
   }
 
   .category-card:hover .btn-category,

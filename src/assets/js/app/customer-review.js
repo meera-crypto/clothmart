@@ -1,5 +1,8 @@
 const reviewTrack = document.querySelector("[data-review-track]");
 const reviewDots = document.querySelector("[data-review-dots]");
+const reviewPrefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
 
 if (reviewTrack && reviewDots) {
   const reviewSlides = Array.from(
@@ -41,7 +44,7 @@ if (reviewTrack && reviewDots) {
       }
 
       slide.scrollIntoView({
-        behavior: "smooth",
+        behavior: reviewPrefersReducedMotion.matches ? "auto" : "smooth",
         block: "nearest",
         inline: "start",
       });
@@ -83,7 +86,7 @@ if (reviewTrack && reviewDots) {
     }
 
     slide.scrollIntoView({
-      behavior: "smooth",
+      behavior: reviewPrefersReducedMotion.matches ? "auto" : "smooth",
       block: "nearest",
       inline: "start",
     });
@@ -98,7 +101,9 @@ if (reviewTrack && reviewDots) {
     { passive: true },
   );
 
-  window.setInterval(() => {
-    goToReview((activeReviewIndex + 1) % reviewSlides.length);
-  }, 4000);
+  if (!reviewPrefersReducedMotion.matches) {
+    window.setInterval(() => {
+      goToReview((activeReviewIndex + 1) % reviewSlides.length);
+    }, 4000);
+  }
 }

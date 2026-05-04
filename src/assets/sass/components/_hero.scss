@@ -1,5 +1,5 @@
 .hero {
- margin-top: 0;
+  margin-top: 0;
 }
 
 .hero__layout {
@@ -55,10 +55,14 @@
   object-fit: cover;
 }
 
-@media (min-width: 1024px) {
-.hero{
-  background-color:var(--c-neutral) ;
+.hero-button {
+  max-width: 153px;
 }
+
+@media (min-width: 1024px) {
+  .hero {
+    background-color: var(--c-neutral);
+  }
 
   .hero__layout {
     display: grid;
@@ -102,6 +106,6 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero__content {
-    margin:  38px 0;
+    margin: 38px 0;
   }
 }

@@ -1,27 +1,35 @@
 <header class="header sticky-top">
   <div class="container">
     <div class="header-top">
-      <img src="/uploads/logo.svg" alt="logo" />
+      <img src="/uploads/logo.svg" alt="Clothmart" loading="lazy" />
       <div class="search-filter">
         <div class="filter-dropdown">
-          <select>
+          <select aria-label="Product category">
             <option>All</option>
             <option>Design</option>
             <option>Development</option>
             <option>Marketing</option>
           </select>
-          <span class="icon-arrowdown"></span>
+          <span class="icon-arrowdown" aria-hidden="true"></span>
         </div>
         <div class="search-box">
-          <form ><input id="search-input" type="text" placeholder="Search..." /><span class="icon-search"></span></form>
+          <form role="search" aria-label="Site search">
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search products"
+            />
+            <span class="icon-search" aria-hidden="true"></span>
+          </form>
         </div>
       </div>
       <div class="mobile-header-actions">
         <button class="mobile-header-action" type="button" aria-label="Search">
-          <span class="icon-search"></span>
+          <span class="icon-search" aria-hidden="true"></span>
         </button>
         <a class="mobile-header-action" href="#" aria-label="Cart">
-          <span class="icon-cart"></span>
+          <span class="icon-cart" aria-hidden="true"></span>
         </a>
       </div>
     </div>
