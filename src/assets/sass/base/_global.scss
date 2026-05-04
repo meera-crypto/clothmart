@@ -32,6 +32,9 @@ body {
 .gap-32 {
   gap: var(--space-32);
 }
+.gap-50 {
+  gap: var(--space-50);
+}
 
 .skip-link {
   position: fixed;
@@ -75,7 +78,7 @@ h3 {
 }
 
 .container {
-  width: min(1200px, 90%);
+  width: min(1120px, 90%);
   margin: 0 auto;
 }
 

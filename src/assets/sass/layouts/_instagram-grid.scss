@@ -8,12 +8,10 @@
 
 .insta-grid__gallery {
   display: grid;
-  gap: 1rem;
 }
 
 .insta-grid__items {
   display: flex;
-  gap: 1rem;
   overflow-x: auto;
 }
 
@@ -66,13 +64,11 @@
 @media (min-width: 1024px) {
   .insta-grid__gallery {
     grid-template-columns: minmax(0, 352fr) minmax(0, 762fr);
-    gap: 1.5rem;
   }
 
   .insta-grid__items {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
     overflow: visible;
   }
 
