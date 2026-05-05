@@ -19,6 +19,7 @@
   background-color: var(--c-secondary);
   color: var(--c-primary);
   font: inherit;
+  transition: var(--transition-ui);
 }
 
 .best-sellers__filters {
@@ -54,7 +55,7 @@
   aspect-ratio: 256 / 336;
   height: auto;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: var(--transition-photo-zoom);
 }
 
 .product-card:hover img,
@@ -77,7 +78,7 @@
   background-color: var(--c-secondary);
   color: var(--c-primary);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color var(--duration-fast) var(--ease-smooth);
 }
 
 .product-card__favorite:hover,
@@ -191,9 +192,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition:
-      opacity 0.25s ease,
-      visibility 0.25s ease;
+    transition: var(--transition-fade);
   }
 
   .product-card:hover .product-card__details::before,
@@ -240,12 +239,12 @@
     pointer-events: none;
     transform: translateY(6px);
     z-index: 2;
-    transition:
-      opacity 0.25s ease,
-      visibility 0.25s ease,
-      transform 0.25s ease,
-      background-color 0.25s ease,
-      color 0.25s ease;
+    transition: opacity var(--duration-medium) var(--ease-smooth),
+      visibility var(--duration-medium) var(--ease-smooth),
+      transform var(--duration-medium) var(--ease-out-soft),
+      background-color var(--duration-interaction) var(--ease-smooth),
+      color var(--duration-interaction) var(--ease-smooth),
+      border-color var(--duration-interaction) var(--ease-smooth);
   }
 
   .product-card:hover .btn.product-card__cart-btn,

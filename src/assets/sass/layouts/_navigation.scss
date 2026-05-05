@@ -35,6 +35,7 @@
   color: var(--c-secondary);
   font-size: var(--fs-xs);
   text-align: center;
+  transition: color var(--duration-interaction) var(--ease-smooth);
 }
 
 .mobile-bottom-nav__item:hover,
@@ -46,6 +47,10 @@
 .mobile-bottom-nav__item .icon-favorite-white,
 .mobile-bottom-nav__item .icon-cart {
   font-size: var(--fs-m);
+}
+
+.icon-login {
+  font-size: var(--fs-xl);
 }
 
 @media (min-width: 768px) {
@@ -99,8 +104,8 @@
     gap: 10px;
     position: relative;
     transition:
-      color 0.3s ease,
-      background-color 0.3s ease;
+      color var(--duration-interaction) var(--ease-smooth),
+      background-color var(--duration-interaction) var(--ease-smooth);
   }
 
   .nav-links ul li a::after {
@@ -113,7 +118,7 @@
     background-color: currentColor;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.3s ease;
+    transition: transform var(--duration-medium) var(--ease-out-soft);
   }
 
   .nav-links ul li a:hover,

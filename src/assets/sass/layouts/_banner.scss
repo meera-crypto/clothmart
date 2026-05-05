@@ -25,18 +25,17 @@
   justify-content: center;
   padding: 2rem 0;
   text-align: center;
-  max-width: 317;
   row-gap: 10px;
   align-items: center;
 }
 
-.banner-text .btn {
-  margin-top: 50px;
-  width: auto;
-}
-
 .sale-event-title {
   font-weight: var(--fw-bold);
+}
+
+.banner-text .btn {
+  margin-top: 20px;
+  width: auto;
 }
 
 @media (min-width: 768px) {
@@ -52,5 +51,10 @@
   .banner-text {
     padding: clamp(2rem, 5vw, 4rem);
     background-color: var(--c-neutral-dark);
+  }
+
+  .banner-text .btn {
+    margin-top: 50px;
+    width: auto;
   }
 }

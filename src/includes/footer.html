@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="contact-details">
-        <img src="/uploads/logo-white.svg" width="104" height="30" alt="Clothmart" loading="lazy" />
+        <img src="/uploads/logo-white.svg" width="103" height="19" alt="Clothmart" loading="lazy" />
         <p>Lorem Is Dolor Sit Amet, Consectetur Adipisicing Elit. Read More</p>
         <ul class="contact-list">
           <li>
@@ -92,7 +92,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="authModalLabel">Login / Register</h5>
+        <h5 class="modal-title" id="authModalLabel">Log in</h5>
         <button
           type="button"
           class="btn-close"
@@ -101,33 +101,151 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="auth-login-form" method="post" action="#" autocomplete="on" novalidate>
           <div class="mb-3">
-            <label for="auth-email" class="form-label">Email address *</label>
+            <label for="auth-login-email" class="form-label"
+              >Email address *</label
+            >
             <input
               type="email"
               class="form-control"
-              id="auth-email"
+              id="auth-login-email"
+              name="email"
+              inputmode="email"
+              autocomplete="username"
+              autocapitalize="off"
+              spellcheck="false"
               placeholder="Enter your email"
-              autocomplete="email"
               required
+              aria-required="true"
             />
+            <div class="invalid-feedback" role="alert"></div>
           </div>
-          <div class="mb-3">
-            <label for="auth-password" class="form-label">Password *</label>
-            <input
-              type="password"
-              class="form-control"
-              id="auth-password"
-              placeholder="Enter your password"
-              autocomplete="current-password"
-              required
-            />
+          <div class="mb-3 auth-modal__field-password">
+            <label for="auth-login-password" class="form-label"
+              >Password *</label
+            >
+            <div class="auth-modal__password-wrap">
+              <input
+                type="password"
+                class="form-control auth-modal__password-input"
+                id="auth-login-password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+                aria-required="true"
+              />
+              <button
+                type="button"
+                class="auth-modal__toggle-password"
+                aria-controls="auth-login-password"
+                aria-pressed="false"
+                aria-label="Show password"
+              >
+                <span class="auth-modal__toggle-label">Show</span>
+              </button>
+            </div>
+            <div class="invalid-feedback" role="alert"></div>
           </div>
           <button type="submit" class="btn btn-dark w-100">Continue</button>
         </form>
         <p class="auth-modal__signup">
-          New to Clothmart? <a href="#">Signup</a>
+          New to Clothmart?
+          <a href="#" id="auth-open-signup">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade auth-modal"
+  id="signupModal"
+  tabindex="-1"
+  aria-labelledby="signupModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign up</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="auth-signup-form" method="post" action="#" autocomplete="on" novalidate>
+          <div class="mb-3">
+            <label for="auth-signup-name" class="form-label">Full name *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="auth-signup-name"
+              name="name"
+              placeholder="Enter your name"
+              autocomplete="section-registration name"
+              autocapitalize="words"
+              spellcheck="false"
+              required
+              aria-required="true"
+            />
+            <div class="invalid-feedback" role="alert"></div>
+          </div>
+          <div class="mb-3">
+            <label for="auth-signup-email" class="form-label"
+              >Email address *</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="auth-signup-email"
+              name="email"
+              placeholder="Enter your email"
+              inputmode="email"
+              autocomplete="section-registration email"
+              autocapitalize="off"
+              spellcheck="false"
+              required
+              aria-required="true"
+            />
+            <div class="invalid-feedback" role="alert"></div>
+          </div>
+          <div class="mb-3 auth-modal__field-password">
+            <label for="auth-signup-password" class="form-label"
+              >Password *</label
+            >
+            <div class="auth-modal__password-wrap">
+              <input
+                type="password"
+                class="form-control auth-modal__password-input"
+                id="auth-signup-password"
+                name="password"
+                placeholder="Create a password"
+                autocomplete="section-registration new-password"
+                required
+                aria-required="true"
+              />
+              <button
+                type="button"
+                class="auth-modal__toggle-password"
+                aria-controls="auth-signup-password"
+                aria-pressed="false"
+                aria-label="Show password"
+              >
+                <span class="auth-modal__toggle-label">Show</span>
+              </button>
+            </div>
+            <div class="invalid-feedback" role="alert"></div>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Create account</button>
+        </form>
+        <p class="auth-modal__signup">
+          Already have an account?
+          <a href="#" id="auth-open-login">Log in</a>
         </p>
       </div>
     </div>

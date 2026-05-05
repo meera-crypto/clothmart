@@ -1,0 +1,41 @@
+@keyframes heading-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#main-content h1 {
+  animation: heading-fade-up var(--duration-reveal) var(--ease-smooth) both;
+}
+
+.heading-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.heading-reveal.is-visible {
+  animation: heading-fade-up var(--duration-reveal) var(--ease-smooth) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #main-content h1,
+  #main-content h2,
+  #main-content h3,
+  #main-content img {
+    animation: none;
+    transition: none;
+  }
+
+  .heading-reveal,
+  .heading-reveal.is-visible {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

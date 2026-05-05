@@ -1,37 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const headings = document.querySelectorAll(
-    "#main-content h2, #main-content h3",
+  const selectors = [
+    "#main-content h2",
+    "#main-content h3",
+    "#main-content .hero__card",
+    "#main-content .category-card",
+    "#main-content .product-card",
+    "#main-content .service",
+    "#main-content .customer-review__slide",
+    "#main-content .insta-grid__item",
+    "#main-content .banner-content",
+  ].join(", ");
+
+  const elements = Array.prototype.filter.call(
+    document.querySelectorAll(selectors),
+    function (el) {
+      if (el.matches("h3") && el.closest(".banner-content")) {
+        return false;
+      }
+
+      return true;
+    },
   );
 
-  if (!headings.length) {
+  if (!elements.length) {
     return;
   }
 
   if (!("IntersectionObserver" in window)) {
-    headings.forEach(function (heading) {
-      heading.classList.add("is-visible");
+    elements.forEach(function (el) {
+      el.classList.add("is-visible");
     });
     return;
   }
 
-  const headingObserver = new IntersectionObserver(
-    function (entries, observer) {
+  const observer = new IntersectionObserver(
+    function (entries, obs) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) {
           return;
         }
 
         entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       });
     },
     {
-      threshold: 0.2,
+      root: null,
+      rootMargin: "0px",
+      threshold: 0,
     },
   );
 
-  headings.forEach(function (heading) {
-    heading.classList.add("heading-reveal");
-    headingObserver.observe(heading);
+  elements.forEach(function (el) {
+    el.classList.add("heading-reveal");
+    observer.observe(el);
+  });
+
+  /** Flush any intersections already true before the first paint (avoids sticky threshold edge cases). */
+  requestAnimationFrame(function () {
+    observer.takeRecords().forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
   });
 });
