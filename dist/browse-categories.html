@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/plugins.min.css" media="all" />
   <link rel="stylesheet" href="assets/css/app.min.css" media="all" />
-  <title>Page not found — Clothmart</title>
+  <title>Browse categories — Clothmart</title>
 </head>
 
 <body>
@@ -127,20 +127,64 @@
       </div>
     </nav>
   </header>
-  <main id="main-content" class="page-wrap page-404" tabindex="-1">
-    <section class="error-404" aria-labelledby="error-404-title">
-      <div class="container error-404__inner">
-        <p class="error-404__code" aria-hidden="true">404</p>
-        <h1 id="error-404-title" class="error-404__heading">
-          This page doesn’t exist
+  <main id="main-content" class="page-wrap page-browse-categories" tabindex="-1">
+    <section class="browse-categories-intro" aria-labelledby="browse-categories-title">
+      <div class="container browse-categories-intro__container">
+        <a class="btn btn-primary browse-categories-intro__back" href="/">Back to home</a>
+        <h1 id="browse-categories-title" class="browse-categories-intro__title">
+          Browse categories
         </h1>
+        <p class="browse-categories-intro__lead">
+          Shop by department—men&apos;s, women&apos;s, and kids&apos; collections.
+        </p>
+      </div>
+    </section>
 
-        <p class="error-404__lead">The link may be broken or the page may have been removed. Try heading
-          home or use the menu above.</p>
-        <div class="error-404__actions">
-          <a class="btn btn-secondary error-404__btn" href="/">Back to home</a>
+    <section id="categories" class="category" aria-label="Shop by category">
+      <div class="container">
+        <div class="category-cards gap-32" data-category-slider>
+          <div class="category-card">
+            <a class="category-card__link" href="#">
+              <picture>
+                <source srcset="/uploads/mens.webp 1x, /uploads/mens_2x.webp 2x" type="image/webp" />
+                <source srcset="/uploads/mens.jpg 1x, /uploads/mens_2x.jpg 2x" type="image/jpeg" />
+                <img src="/uploads/mens.jpg" alt="Men" width="352" height="449" loading="lazy" />
+              </picture>
+              <div class="category-card__overlay">
+                <h3>Men's</h3>
+                <span class="btn btn-primary btn-category">View Collection</span>
+              </div>
+            </a>
 
-          <a class="btn btn-primary error-404__btn" href="#site-footer">Contact us</a>
+          </div>
+          <div class="category-card">
+            <a class="category-card__link" href="#">
+              <picture>
+                <source srcset="/uploads/women.webp 1x, /uploads/women_2x.webp 2x" type="image/webp" />
+                <source srcset="/uploads/women.jpg 1x, /uploads/women_2x.jpg 2x" type="image/jpeg" />
+                <img src="/uploads/women.jpg" alt="Women" width="352" height="449" loading="lazy" />
+              </picture>
+              <div class="category-card__overlay">
+                <h3>Women's</h3>
+                <span class="btn btn-primary btn-category">View Collection</span>
+              </div>
+            </a>
+
+          </div>
+          <div class="category-card">
+            <a class="category-card__link" href="#">
+              <picture>
+                <source srcset="/uploads/kids.webp 1x, /uploads/kids_2x.webp 2x" type="image/webp" />
+                <source srcset="/uploads/kids.jpg 1x, /uploads/kids_2x.jpg 2x" type="image/jpeg" />
+                <img src="/uploads/kids.jpg" alt="Kids" width="352" height="449" loading="lazy" />
+              </picture>
+              <div class="category-card__overlay">
+                <h3>Kid's</h3>
+                <span class="btn btn-primary btn-category">View Collection</span>
+              </div>
+            </a>
+
+          </div>
         </div>
       </div>
     </section>
