@@ -20,30 +20,32 @@
     <div class="container">
       <div class="header-top">
         <img src="/uploads/logo.svg" alt="Clothmart" loading="lazy">
-        <div class="search-filter">
-          <div class="filter-dropdown">
-            <select aria-label="Product category">
-              <option>All</option>
-              <option>Design</option>
-              <option>Development</option>
-              <option>Marketing</option>
-            </select>
-            <span class="icon-arrowdown" aria-hidden="true"></span>
+        <div class="header-top-end">
+          <div class="search-filter" id="site-search-panel">
+            <div class="filter-dropdown">
+              <select aria-label="Product category">
+                <option>All</option>
+                <option>Design</option>
+                <option>Development</option>
+                <option>Marketing</option>
+              </select>
+              <span class="icon-arrowdown" aria-hidden="true"></span>
+            </div>
+            <div class="search-box">
+              <form role="search" aria-label="Site search">
+                <input id="search-input" type="search" placeholder="Search..." aria-label="Search products">
+                <span class="icon-search" aria-hidden="true"></span>
+              </form>
+            </div>
           </div>
-          <div class="search-box">
-            <form role="search" aria-label="Site search">
-              <input id="search-input" type="search" placeholder="Search..." aria-label="Search products">
+          <div class="mobile-header-actions">
+            <button class="mobile-header-action mobile-search-toggle" type="button" aria-label="Search" aria-expanded="false" aria-controls="site-search-panel">
               <span class="icon-search" aria-hidden="true"></span>
-            </form>
+            </button>
+            <a class="mobile-header-action" href="#" aria-label="Cart">
+              <span class="icon-cart" aria-hidden="true"></span>
+            </a>
           </div>
-        </div>
-        <div class="mobile-header-actions">
-          <button class="mobile-header-action" type="button" aria-label="Search">
-            <span class="icon-search" aria-hidden="true"></span>
-          </button>
-          <a class="mobile-header-action" href="#" aria-label="Cart">
-            <span class="icon-cart" aria-hidden="true"></span>
-          </a>
         </div>
       </div>
     </div>
@@ -218,13 +220,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Louis Philippe</h3>
+                <span class="product-name">Louis Philippe</span>
                 <p>Relaxed Fit Cotton Hoodie</p>
                 <div class="product-card__price">
                   <span>Rs. 1299</span>
                   <del>Rs. 2599</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -244,13 +247,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Louis Philippe</h3>
+                <span class="product-name">Louis Philippe</span>
                 <p>Lightly Washed Slim Fit Jeans</p>
                 <div class="product-card__price">
                   <span>Rs. 999</span>
                   <del>Rs. 1999</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -270,13 +274,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Allen Solly</h3>
+                <span class="product-name">Allen Solly</span>
                 <p>Black Stretch Skinny Fit Jeans</p>
                 <div class="product-card__price">
                   <span>Rs. 1199</span>
                   <del>Rs. 2399</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -296,13 +301,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Puma</h3>
+                <span class="product-name">Puma</span>
                 <p>Logo Print Slim Fit T-Shirt</p>
                 <div class="product-card__price">
                   <span>Rs. 799</span>
                   <del>Rs. 1599</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -322,13 +328,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Van Heusen</h3>
+                <span class="product-name">Van heusen</span>
                 <p>Solid Regular Fit Formal Shirt</p>
                 <div class="product-card__price">
                   <span>Rs. 1099</span>
                   <del>Rs. 2199</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -348,13 +355,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Peter England</h3>
+                <span class="product-name">Peter England</span>
                 <p>Striped Slim Fit Casual Shirt</p>
                 <div class="product-card__price">
                   <span>Rs. 899</span>
                   <del>Rs. 1799</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -374,13 +382,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Only</h3>
+                <span class="product-name">Only</span>
                 <p>Floral Print Fit And Flare Dress</p>
                 <div class="product-card__price">
                   <span>Rs. 1499</span>
                   <del>Rs. 2999</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
             <article class="product-card">
@@ -400,13 +409,14 @@
                 </div>
               </div>
               <div class="product-card__details">
-                <h3>Louis Philippe</h3>
+                <span class="product-name">Louis Philippe</span>
                 <p>Lightly Washed Slim Fit Jeans</p>
                 <div class="product-card__price">
                   <span>Rs. 999</span>
                   <del>Rs. 1999</del>
                   <span class="product-card__discount">(50% OFF)</span>
                 </div>
+                <button class="btn btn-primary product-card__cart-btn" type="button">Add to cart</button>
               </div>
             </article>
           </div>
@@ -552,7 +562,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="contact-details">
-          <img src="/uploads/logo-white.svg" alt="Clothmart" loading="lazy">
+          <img src="/uploads/logo-white.svg" width="104" height="30" alt="Clothmart" loading="lazy">
           <p>Lorem Is Dolor Sit Amet, Consectetur Adipisicing Elit. Read More</p>
           <ul class="contact-list">
             <li>
@@ -565,9 +575,9 @@
             </li>
           </ul>
         </div>
-        <div class="company">
-          <p>Company</p>
-          <ul>
+        <div class="company footer-sections">
+          <p class="footer-section-heading">Company</p>
+          <ul class="footer-section-links">
             <li>
               <a href="#">About Us</a>
             </li>
@@ -582,9 +592,9 @@
             </li>
           </ul>
         </div>
-        <div class="customer-care">
-          <p>Customer Care</p>
-          <ul>
+        <div class="customer-care footer-sections">
+          <p class="footer-section-heading">Customer Care</p>
+          <ul class="footer-section-links">
             <li>
               <a href="#">Size Guide</a>
             </li>
@@ -599,9 +609,9 @@
             </li>
           </ul>
         </div>
-        <div class="terms-policies">
-          <p>Terms & Policies</p>
-          <ul>
+        <div class="terms-policies footer-sections">
+          <p class="footer-section-heading">Terms & Policies</p>
+          <ul class="footer-section-links">
             <li>
               <a href="#">Duties & Taxes</a>
             </li>
@@ -616,27 +626,27 @@
             </li>
           </ul>
         </div>
-        <div class="follow-us">
-          <p>Follow Us</p>
-          <ul>
+        <div class="follow-us footer-sections">
+          <p class="footer-section-heading">Follow Us</p>
+          <ul class="footer-section-links">
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/" target="_blank">
                 <i class="ion ion-social-instagram" aria-hidden="true"></i> Instagram
               </a>
             </li>
             <li>
-              <a href="#">
-                <i class="ion ion-social-facebook" aria-hidden="true"></i> Facebook
+              <a href="https://www.facebook.com/" target="_blank  ">
+                <i class="ion ion-social-facebook" aria-hidden="true" target="_blank  "></i> Facebook
               </a>
             </li>
             <li>
-              <a href="#">
-                <i class="ion ion-social-twitter" aria-hidden="true"></i> Twitter
+              <a href="https://twitter.com/" target="_blank">
+                <i class="ion ion-social-twitter" aria-hidden="true" target="_blank"></i> Twitter
               </a>
             </li>
             <li>
-              <a href="#">
-                <i class="ion ion-social-youtube" aria-hidden="true"></i> Threads
+              <a href="https://www.youtube.com/" target="_blank">
+                <i class="ion ion-social-youtube" aria-hidden="true" target="_blank"></i> Threads
               </a>
             </li>
           </ul>
@@ -645,17 +655,19 @@
     </div>
     <div class="copyright-content">
       <div class="container">
-        <div>
-          <p>© 2024 Vipin Gautam. All Right Reserved</p>
-          <div>
-            <img src="uploads/visa.svg" alt="Visa" loading="lazy">
-            <img src="uploads/gpay.svg" alt="Google Pay" loading="lazy">
-            <img src="uploads/amazon.svg" alt="Amazon Pay" loading="lazy">
-            <img src="uploads/paypal.svg" alt="PayPal" loading="lazy">
-          </div>
-          <div>
-            <p>English(IN)</p>
-            <p>₹ INR</p>
+        <div class="copyright-text-content">
+          <p class="copyright-text">© 2024 Vipin Gautam. All Right Reserved</p>
+          <div class="copyright-meta">
+            <div class="copyright-payment-logos">
+              <img src="uploads/visa.svg" width="40" height="25" alt="Visa" loading="lazy">
+              <img src="uploads/gpay.svg" width="40" height="25" alt="Google Pay" loading="lazy">
+              <img src="uploads/amazon.svg" width="40" height="25" alt="Amazon Pay" loading="lazy">
+              <img src="uploads/paypal.svg" width="40" height="25" alt="PayPal" loading="lazy">
+            </div>
+            <div class="copyright-locale">
+              <p>English(IN)</p>
+              <p>₹ INR</p>
+            </div>
           </div>
         </div>
       </div>

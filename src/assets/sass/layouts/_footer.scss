@@ -3,25 +3,25 @@
   color: var(--c-secondary);
 }
 
-.footer .container > div {
+.footer .container > .footer-top {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
   justify-items: stretch;
   column-gap: 1.5rem;
-  row-gap: 2rem;
+  row-gap: 5rem;
 }
 
-.footer .container > div > * {
+.footer .container > .footer-top > * {
   width: 100%;
   text-align: left;
 }
 
-.footer .container > div > :nth-child(1) {
+.footer .container > .footer-top > :nth-child(1) {
   grid-column: 1 / -1;
 }
 
-.footer .container > div > :nth-child(n + 2) {
+.footer .container > .footer-top > :nth-child(n + 2) {
   grid-column: auto;
 }
 
@@ -29,46 +29,149 @@
   border-top: solid 1px var(--c-secondary);
 }
 
+.copyright-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.copyright-payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.copyright-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.copyright-locale {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .footer-top,
 .copyright-content {
   padding: 50px 0;
 }
 
+.contact-details,
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.85rem;
+}
+
+.footer-section-heading {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+}
+
+.footer-section-links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.15rem;
+}
+
+.footer-section-links li a {
+  font-size: var(--fs-m);
+}
+
+.footer-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.85rem;
+}
+
 @media (min-width: 767px) {
-  .footer .container > div {
+  .footer .container > .footer-top {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    column-gap: 2rem;
-    row-gap: 2.5rem;
   }
 
-  .footer .container > div > :nth-child(1),
-  .footer .container > div > :nth-child(2) {
+  .footer .container > .footer-top > :nth-child(1),
+  .footer .container > .footer-top > :nth-child(2) {
     grid-column: span 3;
   }
 
-  .footer .container > div > :nth-child(3),
-  .footer .container > div > :nth-child(4),
-  .footer .container > div > :nth-child(5) {
+  .footer .container > .footer-top > :nth-child(3),
+  .footer .container > .footer-top > :nth-child(4),
+  .footer .container > .footer-top > :nth-child(5) {
     grid-column: span 2;
+  }
+
+  .copyright-text-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .copyright-meta {
+    width: auto;
+    align-items: flex-end;
+    gap: 1.25rem;
+  }
+
+  .copyright-payment-logos {
+    justify-content: flex-end;
+  }
+
+  .copyright-locale {
+    align-items: center;
+    text-align: right;
   }
 }
 
 @media (min-width: 1023px) {
-  .footer .container > div {
+  .footer .container > .footer-top {
     grid-template-columns: minmax(0, 2fr) repeat(4, minmax(0, 1fr));
     column-gap: 2.5rem;
     row-gap: 0;
   }
 
-  .footer .container > div > * {
+  .footer .container > .footer-top > * {
     text-align: start;
   }
 
-  .footer .container > div > :nth-child(1),
-  .footer .container > div > :nth-child(2),
-  .footer .container > div > :nth-child(3),
-  .footer .container > div > :nth-child(4),
-  .footer .container > div > :nth-child(5) {
+  .footer .container > .footer-top > :nth-child(1),
+  .footer .container > .footer-top > :nth-child(2),
+  .footer .container > .footer-top > :nth-child(3),
+  .footer .container > .footer-top > :nth-child(4),
+  .footer .container > .footer-top > :nth-child(5) {
     grid-column: auto;
+  }
+
+  .copyright-text-content {
+    align-items: center;
+  }
+
+  .copyright-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .copyright-payment-logos {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .copyright-locale {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
   }
 }
