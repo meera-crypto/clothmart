@@ -87,6 +87,11 @@
 .footer-section-links li a {
   font-size: var(--fs-m);
 }
+.footer-section-links li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: inherit;
+}
 
 .footer-sections {
   display: flex;
