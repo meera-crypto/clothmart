@@ -41,7 +41,6 @@
 .hero__description {
   color: var(--c-primary);
   font-size: var(--fs-m);
-  line-height: 1.6;
 }
 
 .hero__media {
@@ -57,6 +56,12 @@
 
 .hero-button {
   max-width: 153px;
+}
+
+@media (min-width: 767px) {
+  .hero__card {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -83,10 +88,10 @@
 
   .hero__card {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: auto;
-    right: -3rem;
-    width: min(500px, 100%);
+    right: -2rem;
+    width: min(619px, 100%);
     margin: 0;
     transform: translateY(-50%);
     z-index: 2;

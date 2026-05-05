@@ -166,7 +166,9 @@ input {
     transition: none;
   }
 
-  .heading-reveal {
+  .heading-reveal,
+  .heading-reveal.is-visible {
+    animation: none;
     opacity: 1;
     transform: none;
   }
