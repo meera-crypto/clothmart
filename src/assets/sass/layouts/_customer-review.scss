@@ -4,6 +4,10 @@
 
 .customer-review p {
   text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+  color: var(--c-text);
+  margin-bottom: 15px;
 }
 
 .customer-review__slider {
@@ -41,11 +45,25 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: background-color var(--duration-interaction) var(--ease-smooth),
+  transition:
+    background-color var(--duration-interaction) var(--ease-smooth),
     transform var(--duration-interaction) var(--ease-out-soft);
 }
 
 .customer-review__dot.is-active {
   background-color: var(--c-primary);
   transform: scale(1.15);
+}
+
+.customer-review__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transition: all var(--duration-interaction) var(--ease-smooth);
+}
+
+.customer-review__dot.is-active {
+  width: 24px;
+  border-radius: 999px;
+  background-color: var(--c-primary);
 }

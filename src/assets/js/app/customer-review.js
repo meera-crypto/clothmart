@@ -35,6 +35,19 @@ if (reviewTrack && reviewDots) {
     );
   }
 
+  const scrollTrackToSlide = (slide) => {
+    if (!slide || !reviewTrack) {
+      return;
+    }
+
+    const left = slide.offsetLeft;
+
+    reviewTrack.scrollTo({
+      left,
+      behavior: reviewPrefersReducedMotion.matches ? "auto" : "smooth",
+    });
+  };
+
   reviewDotButtons.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       const slide = reviewSlides[index];
@@ -43,11 +56,7 @@ if (reviewTrack && reviewDots) {
         return;
       }
 
-      slide.scrollIntoView({
-        behavior: reviewPrefersReducedMotion.matches ? "auto" : "smooth",
-        block: "nearest",
-        inline: "start",
-      });
+      scrollTrackToSlide(slide);
     });
   });
 
@@ -85,11 +94,7 @@ if (reviewTrack && reviewDots) {
       return;
     }
 
-    slide.scrollIntoView({
-      behavior: reviewPrefersReducedMotion.matches ? "auto" : "smooth",
-      block: "nearest",
-      inline: "start",
-    });
+    scrollTrackToSlide(slide);
   };
 
   reviewTrack.addEventListener(
@@ -104,6 +109,6 @@ if (reviewTrack && reviewDots) {
   if (!reviewPrefersReducedMotion.matches) {
     window.setInterval(() => {
       goToReview((activeReviewIndex + 1) % reviewSlides.length);
-    }, 4000);
+    }, 5000);
   }
 }

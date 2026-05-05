@@ -1,3 +1,43 @@
+.page-browse-categories .browse-categories-intro {
+  margin-top: 0;
+}
+
+.browse-categories-intro {
+  padding: clamp(2rem, 5vw, 3.5rem) 0 0;
+  text-align: center;
+}
+
+.browse-categories-intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.browse-categories-intro__back {
+  align-self: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.browse-categories-intro__title {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: var(--fw-regular);
+  color: var(--c-primary);
+  letter-spacing: 0.02em;
+}
+
+.browse-categories-intro__lead {
+  margin: 0.75rem auto 0;
+  max-width: 28rem;
+  font-size: var(--fs-s);
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
 .category-cards {
   display: flex;
   overflow-x: auto;
