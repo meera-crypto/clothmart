@@ -2,7 +2,6 @@
   font-size: var(--fs-l);
   border-radius: 6px;
   transition: var(--transition-ui);
-  padding: 10px 20px;
 }
 
 .btn:hover {
@@ -25,4 +24,10 @@
   background-color: var(--c-primary);
   color: var(--c-secondary);
   border: solid 1px var(--c-primary);
+}
+
+@media (min-width: 1023px) {
+  .btn {
+    padding: 10px 20px;
+  }
 }
