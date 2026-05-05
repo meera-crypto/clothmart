@@ -1,4 +1,5 @@
 //=require app/base.js
+//=require app/auth-modal.js
 //=require app/mobile-search.js
 //=require app/menu.js
 //=require app/category.js
