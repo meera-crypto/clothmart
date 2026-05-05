@@ -104,6 +104,6 @@ if (reviewTrack && reviewDots) {
   if (!reviewPrefersReducedMotion.matches) {
     window.setInterval(() => {
       goToReview((activeReviewIndex + 1) % reviewSlides.length);
-    }, 4000);
+    }, 5000);
   }
 }
