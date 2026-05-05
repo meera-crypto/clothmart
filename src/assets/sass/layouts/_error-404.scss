@@ -1,0 +1,55 @@
+.page-404 {
+  min-height: min(70vh, 32rem);
+}
+
+.error-404 {
+  padding: clamp(2rem, 6vw, 4rem) 0;
+  text-align: center;
+}
+
+.error-404__inner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.error-404__code {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(4rem, 12vw, 6.5rem);
+  font-weight: var(--fw-regular, 400);
+  line-height: 1;
+  color: var(--c-primary);
+  letter-spacing: 0.02em;
+}
+
+.error-404__heading {
+  margin: 1rem 0 0;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  color: var(--c-primary);
+}
+
+.error-404__lead {
+  margin: 1rem 0 0;
+  font-size: var(--fs-s);
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
+.error-404__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1.75rem;
+}
+
+.error-404__btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+}
