@@ -4,141 +4,142 @@
  * Default
 */
 .form-control {
-    border       : toRem(1) solid var(--c-white);
-    border-radius: toRem(0);
-    padding      : toRem(3) toRem(7);
-    margin-top: toRem(12);
-    outline: none;
-    font-size: toRem(12);
+  border: toRem(1) solid var(--c-white);
+  border-radius: toRem(0);
+  padding: toRem(3) toRem(7);
+  margin-top: toRem(12);
+  outline: none;
+  font-size: toRem(12);
 
-    @include input-placeholder {
-        color:  var(--c-black);
-    }
+  @include input-placeholder {
+    color: var(--c-black);
+  }
 
-    &:focus {
-        box-shadow  : none;
-        border-color: var(--c-black);
-    }
+  &:focus {
+    box-shadow: none;
+    border-color: var(--c-black);
+  }
 
-    &:focus-visible {
-        outline: 3px solid var(--c-red);
-        outline-offset: 3px;
-    }
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
 
-    .disbled {
-        background-color: #f1f1f1;
-    }
-
+  .disbled {
+    background-color: #f1f1f1;
+  }
 }
-select{
-    width: 100%;
-    border       : toRem(1) solid var(--c-white);
-    padding      : 0 toRem(7);
-    border-radius: toRem(0);
-    outline: none; 
-    margin-top: toRem(12); 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-size: toRem(12);
-    background:var(--c-white) url(../../../images/icons/select_icon.png) no-repeat center right;
-    background-size: 24px auto;
+select {
+  width: 100%;
+  border: toRem(1) solid var(--c-white);
+  padding: 0 toRem(7);
+  border-radius: toRem(0);
+  outline: none;
+  margin-top: toRem(12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: toRem(12);
+  background: var(--c-white) url(../../../images/icons/select_icon.png)
+    no-repeat center right;
+  background-size: 24px auto;
 
-    &:focus-visible {
-        outline: 3px solid var(--c-red);
-        outline-offset: 3px;
-    }
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
 }
 
 .auth-modal .modal-dialog {
-    width: min(100% - 2rem, 32rem);
-    margin: 1rem auto;
+  width: min(100% - 2rem, 32rem);
+  margin: 1rem auto;
 }
 
 .auth-modal .modal-content {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .auth-modal .modal-body {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .auth-modal .form-label {
-    margin-bottom: 0;
-    font-size: var(--fs-s);
+  margin-bottom: 0;
+  font-size: var(--fs-s);
 }
 
 .auth-modal .form-control {
-    width: 100%;
-    margin-top: 0.5rem;
-    padding: toRem(12) toRem(14);
-    border: toRem(1) solid var(--c-grey);
-    background-color: var(--c-secondary);
-    transition: border-color var(--duration-interaction) var(--ease-smooth),
-      background-color var(--duration-interaction) var(--ease-smooth),
-      box-shadow var(--duration-interaction) var(--ease-smooth);
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: toRem(12) toRem(14);
+  border: toRem(1) solid var(--c-grey);
+  background-color: var(--c-secondary);
+  transition:
+    border-color var(--duration-interaction) var(--ease-smooth),
+    background-color var(--duration-interaction) var(--ease-smooth),
+    box-shadow var(--duration-interaction) var(--ease-smooth);
 }
 
 .auth-modal__signup {
-    margin: 1rem 0 0;
-    text-align: center;
+  margin: 1rem 0 0;
+  text-align: center;
 }
 
 .auth-modal__signup a {
-    color: var(--c-primary);
-    text-decoration: underline;
+  color: var(--c-primary);
+  text-decoration: underline;
 }
 
 .auth-modal__password-wrap {
-    position: relative;
-    margin-top: 0.5rem;
+  position: relative;
+  margin-top: 0.5rem;
 }
 
 .auth-modal__password-wrap .auth-modal__password-input {
-    margin-top: 0;
-    padding-right: 4.5rem;
-    width: 100%;
+  margin-top: 0;
+  padding-right: 4.5rem;
+  width: 100%;
 }
 
 .auth-modal__toggle-password {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 4rem;
-    padding: 0 0.625rem;
-    border: 0;
-    background: transparent;
-    color: var(--c-primary);
-    font: inherit;
-    font-size: 0.8125rem;
-    font-weight: var(--fw-medium, 500);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color var(--duration-interaction) var(--ease-smooth),
-      opacity var(--duration-interaction) var(--ease-smooth);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  padding: 0 0.625rem;
+  border: 0;
+  background: transparent;
+  color: var(--c-primary);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: var(--fw-medium, 500);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color var(--duration-interaction) var(--ease-smooth),
+    opacity var(--duration-interaction) var(--ease-smooth);
 
-    &:hover {
-        color: var(--c-black);
-        text-decoration: underline;
-    }
+  &:hover {
+    color: var(--c-black);
+    text-decoration: underline;
+  }
 
-    &:focus-visible {
-        color: var(--c-black);
-        text-decoration: underline;
-        outline: 2px solid var(--c-red);
-        outline-offset: 2px;
-    }
+  &:focus-visible {
+    color: var(--c-black);
+    text-decoration: underline;
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
 }
 
 @media (min-width: 768px) {
-    .auth-modal .modal-body {
-        padding: 2rem;
-    }
+  .auth-modal .modal-body {
+    padding: 2rem;
+  }
 }
- 

@@ -47,8 +47,15 @@ $mainlink-font-path: "../fonts";
 
   --transition-photo-zoom: transform var(--duration-slow) var(--ease-out-soft);
 
-  --transition-fade: opacity var(--duration-medium) var(--ease-smooth),
+  --transition-fade:
+    opacity var(--duration-medium) var(--ease-smooth),
     visibility var(--duration-medium) var(--ease-smooth);
+
+  /* Keyboard focus — theme primary on light surfaces, secondary on dark */
+  --focus-ring-color: var(--c-primary);
+  --focus-ring-color-inverse: var(--c-secondary);
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -38,8 +38,20 @@ header {
 }
 
 .mobile-header-action:hover,
-.mobile-header-action:focus {
+.mobile-header-action:focus-visible {
   border-color: var(--c-primary);
+}
+
+.mobile-header-action:active {
+  background-color: var(--c-primary);
+  border-color: var(--c-primary);
+  color: var(--c-secondary);
+}
+
+.search-filter .filter-dropdown select:focus-visible,
+.search-filter .search-box input:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: calc(-1 * var(--focus-ring-width));
 }
 
 .header-top-end {
