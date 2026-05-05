@@ -59,7 +59,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: var(--transition-photo-zoom);
 }
 
 .insta-grid__item:hover img {
@@ -92,9 +92,7 @@
   .insta-grid__instagram-badge {
     opacity: 0;
     visibility: hidden;
-    transition:
-      opacity 0.2s ease,
-      visibility 0.2s ease;
+    transition: var(--transition-fade);
   }
 
   .insta-grid__item:hover .insta-grid__instagram-badge,

@@ -1,7 +1,7 @@
 .btn {
   font-size: var(--fs-l);
   border-radius: 6px;
-  transition: all 0.5s ease;
+  transition: var(--transition-ui);
   padding: 10px 20px;
 }
 

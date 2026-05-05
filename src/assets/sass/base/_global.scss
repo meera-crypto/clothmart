@@ -47,6 +47,7 @@ body {
   color: var(--c-secondary);
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
+  transition: transform var(--duration-medium) var(--ease-out-soft);
 }
 
 .skip-link:focus,
@@ -106,13 +107,17 @@ del {
 a,
 .btn,
 .icon {
-  transition: 0.3s all;
+  transition: var(--transition-ui);
 }
 
 a {
   text-decoration: none;
   color: var(--c-secondary);
   font-size: var(--fs-s);
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 ul {
@@ -145,7 +150,7 @@ input {
 }
 
 #main-content h1 {
-  animation: heading-fade-up 0.6s ease both;
+  animation: heading-fade-up var(--duration-reveal) var(--ease-smooth) both;
 }
 
 .heading-reveal {
@@ -154,7 +159,7 @@ input {
 }
 
 .heading-reveal.is-visible {
-  animation: heading-fade-up 0.6s ease both;
+  animation: heading-fade-up var(--duration-reveal) var(--ease-smooth) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

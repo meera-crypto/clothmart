@@ -41,8 +41,11 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: background-color var(--duration-interaction) var(--ease-smooth),
+    transform var(--duration-interaction) var(--ease-out-soft);
 }
 
 .customer-review__dot.is-active {
   background-color: var(--c-primary);
+  transform: scale(1.15);
 }

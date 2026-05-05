@@ -26,4 +26,37 @@ $mainlink-font-path: "../fonts";
   --space-16: 16px;
   --space-32: 32px;
   --space-50: 50px;
+
+  // Motion — shared easing/durations for smooth UI
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 200ms;
+  --duration-interaction: 280ms;
+  --duration-medium: 360ms;
+  --duration-slow: 480ms;
+  --duration-reveal: 620ms;
+
+  --transition-ui:
+    color var(--duration-interaction) var(--ease-smooth),
+    background-color var(--duration-interaction) var(--ease-smooth),
+    border-color var(--duration-interaction) var(--ease-smooth),
+    opacity var(--duration-interaction) var(--ease-smooth),
+    transform var(--duration-interaction) var(--ease-smooth),
+    box-shadow var(--duration-interaction) var(--ease-smooth),
+    filter var(--duration-interaction) var(--ease-smooth);
+
+  --transition-photo-zoom: transform var(--duration-slow) var(--ease-out-soft);
+
+  --transition-fade: opacity var(--duration-medium) var(--ease-smooth),
+    visibility var(--duration-medium) var(--ease-smooth);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-interaction: 1ms;
+    --duration-medium: 1ms;
+    --duration-slow: 1ms;
+    --duration-reveal: 1ms;
+  }
 }
