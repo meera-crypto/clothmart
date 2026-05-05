@@ -9,7 +9,7 @@
   width: 100%;
   justify-items: stretch;
   column-gap: 1.5rem;
-  row-gap: 2rem;
+  row-gap: 5rem;
 }
 
 .footer .container > div > * {
@@ -34,11 +34,40 @@
   padding: 50px 0;
 }
 
+.contact-details,
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.85rem;
+}
+
+.footer-section-heading {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+}
+
+.footer-section-links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.15rem;
+}
+
+.footer-section-links li a {
+  font-size: var(--fs-m);
+}
+
+.footer-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.85rem;
+}
+
 @media (min-width: 767px) {
   .footer .container > div {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    column-gap: 2rem;
-    row-gap: 2.5rem;
   }
 
   .footer .container > div > :nth-child(1),
