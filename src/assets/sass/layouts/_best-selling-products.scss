@@ -36,6 +36,10 @@
   justify-content: center;
 }
 
+.best-sellers__grid + .best-sellers__grid {
+  margin-top: var(--space-32);
+}
+
 .product-card picture,
 .product-card img {
   display: block;
@@ -58,8 +62,7 @@
   transition: var(--transition-photo-zoom);
 }
 
-.product-card:hover img,
-.product-card:focus-within img {
+.product-card:hover img {
   transform: scale(1.06);
 }
 
@@ -81,8 +84,7 @@
   transition: color var(--duration-button) var(--ease-button);
 }
 
-.product-card__favorite:hover,
-.product-card__favorite:focus-visible {
+.product-card__favorite:hover {
   color: var(--c-favorite);
 }
 
@@ -154,8 +156,33 @@
 }
 
 .load-more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 50px 0;
   border-bottom: 1px solid var(--c-primary);
+}
+
+.load-more:has(.best-sellers__back-top) {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.load-more:has(.best-sellers__back-top) .best-sellers__back-top {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.load-more:has(.best-sellers__back-top) > .btn {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.best-sellers__back-top {
+  flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
@@ -193,28 +220,23 @@
     transition: var(--transition-fade);
   }
 
-  .product-card:hover .product-card__details::before,
-  .product-card:focus-within .product-card__details::before {
+  .product-card:hover .product-card__details::before {
     opacity: 1;
     visibility: visible;
   }
 
-  .product-card:hover .product-card__details,
-  .product-card:focus-within .product-card__details {
+  .product-card:hover .product-card__details {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
   }
 
   .product-card:hover .product-card__details > .product-name,
-  .product-card:hover .product-card__details > p,
-  .product-card:focus-within .product-card__details > .product-name,
-  .product-card:focus-within .product-card__details > p {
+  .product-card:hover .product-card__details > p {
     display: none;
   }
 
-  .product-card:hover .product-card__details .product-card__price,
-  .product-card:focus-within .product-card__details .product-card__price {
+  .product-card:hover .product-card__details .product-card__price {
     position: relative;
     z-index: 2;
     order: 2;
@@ -242,8 +264,7 @@
       border-color;
   }
 
-  .product-card:hover .btn.product-card__cart-btn,
-  .product-card:focus-within .btn.product-card__cart-btn {
+  .product-card:hover .btn.product-card__cart-btn {
     position: relative;
     left: auto;
     right: auto;
