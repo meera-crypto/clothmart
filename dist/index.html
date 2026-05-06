@@ -815,27 +815,27 @@
           <ul class="footer-section-links">
             <li>
               <a href="https://www.instagram.com/" target="_blank">
-                <i class="ion ion-social-instagram" aria-hidden="true"></i> Instagram
+                <i class="ion ion-social-instagram" aria-hidden="true"></i>
+                Instagram
               </a>
-
             </li>
             <li>
               <a href="https://www.facebook.com/" target="_blank  ">
-                <i class="ion ion-social-facebook" aria-hidden="true" target="_blank  "></i> Facebook
+                <i class="ion ion-social-facebook" aria-hidden="true" target="_blank  "></i>
+                Facebook
               </a>
-
             </li>
             <li>
               <a href="https://twitter.com/" target="_blank">
-                <i class="ion ion-social-twitter" aria-hidden="true" target="_blank"></i> Twitter
+                <i class="ion ion-social-twitter" aria-hidden="true" target="_blank"></i>
+                Twitter
               </a>
-
             </li>
             <li>
               <a href="https://www.youtube.com/" target="_blank">
-                <i class="ion ion-social-youtube" aria-hidden="true" target="_blank"></i> Threads
+                <i class="ion ion-social-youtube" aria-hidden="true" target="_blank"></i>
+                Threads
               </a>
-
             </li>
           </ul>
         </div>
@@ -853,20 +853,26 @@
               <img src="uploads/paypal.svg" width="40" height="25" alt="PayPal" loading="lazy" />
             </div>
             <div class="copyright-locale">
-              <p>English(IN)</p>
-              <p>₹ INR</p>
+              <select name="locale" id="locale-select" aria-label="language selection">
+                <option value="en_IN">English(IN)</option>
+                <option value="hi_IN">Hindi(IN)</option>
+              </select>
+              <select name="currency" id="currency-select" aria-label="currency selection">
+                <option value="INR">₹ INR</option>
+                <option value="USD">$ USD</option>
+              </select>
             </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
   <div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="authModalLabel">Log in</h5>
-
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -882,14 +888,15 @@
                 <input type="password" class="form-control auth-modal__password-input" id="auth-login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required aria-required="true" />
                 <button type="button" class="auth-modal__toggle-password" aria-controls="auth-login-password" aria-pressed="false" aria-label="Show password">
                   <span class="auth-modal__toggle-label">Show</span>
-
                 </button>
               </div>
               <div class="invalid-feedback" role="alert"></div>
             </div>
             <button type="submit" class="btn btn-dark w-100">Continue</button>
           </form>
-          <p class="auth-modal__signup">New to Clothmart? <a href="#" id="auth-open-signup">Sign up</a>
+          <p class="auth-modal__signup">
+            New to Clothmart?
+            <a href="#" id="auth-open-signup">Sign up</a>
 
           </p>
         </div>

@@ -100,6 +100,12 @@
   gap: 1.85rem;
 }
 
+.footer select {
+  color: var(--c-secondary);
+  font-size: var(--fs-m);
+  margin: 0;
+}
+
 @media (min-width: 767px) {
   .footer .container > .footer-top {
     grid-template-columns: repeat(6, minmax(0, 1fr));
