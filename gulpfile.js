@@ -160,6 +160,10 @@ function uploads_webp() {
     .pipe(gulp.dest("dist/uploads/"));
 }
 
+function site_files() {
+  return gulp.src(["src/robots.txt", "src/sitemap.xml"]).pipe(gulp.dest("dist/"));
+}
+
 function serve() {
   browserSync.init({
     open: true,
@@ -174,6 +178,10 @@ function browserSyncReload(done) {
 
 function watchFiles() {
   gulp.watch("src/**/*.html", gulp.series(html, browserSyncReload));
+  gulp.watch(
+    ["src/robots.txt", "src/sitemap.xml"],
+    gulp.series(site_files, browserSyncReload),
+  );
   gulp.watch(
     "src/assets/sass/**/*.scss",
     gulp.series(plugins_css, browserSyncReload),
@@ -207,6 +215,7 @@ exports.app_js = app_js;
 exports.jquery_js = jquery_js;
 exports.plugins_js = plugins_js;
 exports.fonts = fonts;
+exports.site_files = site_files;
 
 exports.del = del;
 exports.serve = gulp.parallel(
@@ -221,6 +230,7 @@ exports.serve = gulp.parallel(
   uploads,
   img_webp,
   uploads_webp,
+  site_files,
   watchFiles,
   serve,
 );
@@ -237,4 +247,5 @@ exports.default = gulp.series(
   uploads,
   img_webp,
   uploads_webp,
+  site_files,
 );
