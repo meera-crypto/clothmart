@@ -52,7 +52,7 @@ body {
   color: var(--c-secondary);
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  transition: transform var(--duration-medium) var(--ease-out-soft);
+  transition: transform var(--duration-ui) var(--ease-ui);
 }
 
 .skip-link:focus,
@@ -130,7 +130,7 @@ del {
 a,
 .btn,
 .icon {
-  transition: var(--transition-ui);
+  @include transition-ui;
   font-weight: var(--fw-medium);
 }
 

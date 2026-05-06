@@ -19,7 +19,7 @@
   background-color: var(--c-secondary);
   color: var(--c-primary);
   font: inherit;
-  transition: var(--transition-ui);
+  @include transition-ui;
 }
 
 .best-sellers__filters {
@@ -78,7 +78,7 @@
   background-color: var(--c-secondary);
   color: var(--c-primary);
   cursor: pointer;
-  transition: color var(--duration-fast) var(--ease-smooth);
+  transition: color var(--duration-fast) var(--ease-ui);
 }
 
 .product-card__favorite:hover,
@@ -237,12 +237,10 @@
     pointer-events: none;
     transform: translateY(6px);
     z-index: 2;
-    transition: opacity var(--duration-medium) var(--ease-smooth),
-      visibility var(--duration-medium) var(--ease-smooth),
-      transform var(--duration-medium) var(--ease-out-soft),
-      background-color var(--duration-interaction) var(--ease-smooth),
-      color var(--duration-interaction) var(--ease-smooth),
-      border-color var(--duration-interaction) var(--ease-smooth);
+    transition-property: opacity, visibility, transform, background-color, color,
+      border-color;
+    transition-duration: var(--duration-medium);
+    transition-timing-function: var(--ease-ui);
   }
 
   .product-card:hover .btn.product-card__cart-btn,

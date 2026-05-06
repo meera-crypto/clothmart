@@ -27,29 +27,24 @@ $mainlink-font-path: "../fonts";
   --space-32: 32px;
   --space-50: 50px;
 
-  // Motion — shared easing/durations for smooth UI
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
-  --duration-fast: 200ms;
-  --duration-interaction: 280ms;
-  --duration-medium: 360ms;
-  --duration-slow: 480ms;
-  --duration-reveal: 620ms;
+  // Motion — one duration + ease for most UI (smooth deceleration)
+  --ease-ui: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-smooth: var(--ease-ui);
+  --ease-out-soft: var(--ease-ui);
+  --duration-ui: 260ms;
+  --duration-button: 340ms;
+  --ease-button: cubic-bezier(0.45, 0, 0.55, 1);
+  --duration-fast: 180ms;
+  --duration-interaction: var(--duration-ui);
+  --duration-medium: 340ms;
+  --duration-slow: 420ms;
+  --duration-reveal: 560ms;
 
-  --transition-ui:
-    color var(--duration-interaction) var(--ease-smooth),
-    background-color var(--duration-interaction) var(--ease-smooth),
-    border-color var(--duration-interaction) var(--ease-smooth),
-    opacity var(--duration-interaction) var(--ease-smooth),
-    transform var(--duration-interaction) var(--ease-smooth),
-    box-shadow var(--duration-interaction) var(--ease-smooth),
-    filter var(--duration-interaction) var(--ease-smooth);
-
-  --transition-photo-zoom: transform var(--duration-slow) var(--ease-out-soft);
+  --transition-photo-zoom: transform var(--duration-slow) var(--ease-ui);
 
   --transition-fade:
-    opacity var(--duration-medium) var(--ease-smooth),
-    visibility var(--duration-medium) var(--ease-smooth);
+    opacity var(--duration-medium) var(--ease-ui),
+    visibility var(--duration-medium) var(--ease-ui);
 
   /* Keyboard focus — theme primary on light surfaces, secondary on dark */
   --focus-ring-color: var(--c-primary);
@@ -61,7 +56,8 @@ $mainlink-font-path: "../fonts";
 @media (prefers-reduced-motion: reduce) {
   :root {
     --duration-fast: 1ms;
-    --duration-interaction: 1ms;
+    --duration-button: 1ms;
+    --duration-ui: 1ms;
     --duration-medium: 1ms;
     --duration-slow: 1ms;
     --duration-reveal: 1ms;

@@ -73,10 +73,8 @@ select {
   padding: toRem(12) toRem(14);
   border: toRem(1) solid var(--c-grey);
   background-color: var(--c-secondary);
-  transition:
-    border-color var(--duration-interaction) var(--ease-smooth),
-    background-color var(--duration-interaction) var(--ease-smooth),
-    box-shadow var(--duration-interaction) var(--ease-smooth);
+  @include transition-ui;
+  transition-property: border-color, background-color, box-shadow;
 }
 
 /* Validation: icon + message above the field (not inside Bootstrap’s padded input) */
@@ -152,9 +150,8 @@ select {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   cursor: pointer;
-  transition:
-    color var(--duration-interaction) var(--ease-smooth),
-    opacity var(--duration-interaction) var(--ease-smooth);
+  @include transition-ui;
+  transition-property: color, opacity;
 
   &:hover {
     color: var(--c-black);
