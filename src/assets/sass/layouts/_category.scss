@@ -35,7 +35,6 @@
   max-width: 28rem;
   font-size: var(--fs-s);
   color: var(--c-text);
-  line-height: 1.5;
 }
 
 .category-cards {
@@ -98,7 +97,6 @@
 
 .category-card__overlay h3 {
   margin: 0;
-  line-height: 1;
 }
 
 @media (min-width: 767px) {

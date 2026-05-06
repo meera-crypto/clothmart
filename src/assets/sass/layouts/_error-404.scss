@@ -17,7 +17,6 @@
   font-family: var(--font-primary);
   font-size: clamp(4rem, 12vw, 6.5rem);
   font-weight: var(--fw-regular, 400);
-  line-height: 1;
   color: var(--c-primary);
   letter-spacing: 0.02em;
 }
@@ -34,7 +33,6 @@
   margin: 1rem 0 0;
   font-size: var(--fs-s);
   color: var(--c-text);
-  line-height: 1.5;
 }
 
 .error-404__actions {
