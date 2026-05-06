@@ -1,8 +1,8 @@
 .btn {
   font-size: var(--fs-l);
   border-radius: 6px;
-  transition-duration: var(--duration-button);
-  transition-timing-function: var(--ease-button);
+  font-weight: var(--fw-medium);
+  @include transition-button;
 }
 
 .btn:focus {

@@ -121,7 +121,9 @@
   .category-card .btn-category {
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition-fade);
+    @include transition-button;
+    transition-property: opacity, visibility, color, background-color, border-color,
+      transform, box-shadow;
   }
 
   .category-card:hover .btn-category,

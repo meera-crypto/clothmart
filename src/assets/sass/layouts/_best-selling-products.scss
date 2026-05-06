@@ -78,7 +78,7 @@
   background-color: var(--c-secondary);
   color: var(--c-primary);
   cursor: pointer;
-  transition: color var(--duration-fast) var(--ease-ui);
+  transition: color var(--duration-button) var(--ease-button);
 }
 
 .product-card__favorite:hover,
@@ -237,10 +237,9 @@
     pointer-events: none;
     transform: translateY(6px);
     z-index: 2;
+    @include transition-button;
     transition-property: opacity, visibility, transform, background-color, color,
       border-color;
-    transition-duration: var(--duration-medium);
-    transition-timing-function: var(--ease-ui);
   }
 
   .product-card:hover .btn.product-card__cart-btn,

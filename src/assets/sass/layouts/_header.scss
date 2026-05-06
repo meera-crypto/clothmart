@@ -34,7 +34,7 @@ header {
   border-radius: 50%;
   background-color: transparent;
   color: var(--c-primary);
-  @include transition-ui;
+  @include transition-button;
 }
 
 .mobile-header-action:hover,
@@ -134,7 +134,7 @@ header {
     border-left: 1px solid var(--c-primary);
     background-color: transparent;
     height: 38px;
-    @include transition-ui;
+    @include transition-button;
   }
 }
 
