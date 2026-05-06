@@ -87,6 +87,24 @@
 .footer-section-links li a {
   font-size: var(--fs-m);
 }
+
+.follow-us .footer-section-links li a {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  align-items: center;
+  column-gap: 0.5rem;
+  width: 100%;
+}
+
+.follow-us .footer-section-links li a .ion {
+  justify-self: center;
+  width: 1.5rem;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-section-links li a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -98,6 +116,16 @@
   flex-direction: column;
   align-items: start;
   gap: 1.85rem;
+}
+
+.footer select {
+  color: var(--c-secondary);
+  font-size: var(--fs-m);
+  margin: 0;
+}
+
+.modal-header {
+  padding: 1rem 2rem;
 }
 
 @media (min-width: 767px) {

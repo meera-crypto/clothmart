@@ -44,7 +44,6 @@
 
 .insta-grid__instagram-badge .ion {
   font-size: 25px;
-  line-height: 1;
 }
 
 .insta-grid__items .insta-grid__item {
@@ -72,6 +71,16 @@
 
 .insta-grid__item:not(.insta-grid__item--featured) img {
   aspect-ratio: 238 / 237;
+}
+
+@media (max-width: 766px) {
+  .insta-grid__items {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    box-sizing: border-box;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
 }
 
 @media (min-width: 767px) {

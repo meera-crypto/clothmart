@@ -212,6 +212,29 @@
 }
 
 /**
+* Default interactive transition (explicit properties, no filter/all)
+* @include transition-ui;
+*/
+
+@mixin transition-ui {
+  transition-property: color, background-color, border-color, opacity, transform,
+    box-shadow;
+  transition-duration: var(--duration-ui);
+  transition-timing-function: var(--ease-ui);
+}
+
+/**
+* Buttons — same duration/easing everywhere (hover, theme switches)
+*/
+
+@mixin transition-button {
+  transition-property: color, background-color, border-color, opacity, transform,
+    box-shadow;
+  transition-duration: var(--duration-button);
+  transition-timing-function: var(--ease-button);
+}
+
+/**
 * Transition
 * @include transition(height, 0.2s, linear);
 */

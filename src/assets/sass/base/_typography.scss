@@ -46,3 +46,9 @@
   --fw-medium: 500;
   --fw-bold: 700;
 }
+
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: #{toRem(32)};
+  }
+}

@@ -35,7 +35,7 @@
   color: var(--c-secondary);
   font-size: var(--fs-xs);
   text-align: center;
-  transition: color var(--duration-interaction) var(--ease-smooth);
+  transition: color var(--duration-ui) var(--ease-ui);
 }
 
 .mobile-bottom-nav__item:hover,
@@ -103,22 +103,21 @@
     height: 100%;
     gap: 10px;
     position: relative;
-    transition:
-      color var(--duration-interaction) var(--ease-smooth),
-      background-color var(--duration-interaction) var(--ease-smooth);
+    @include transition-ui;
+    transition-property: color, background-color;
   }
 
   .nav-links ul li a::after {
     content: "";
     position: absolute;
     right: 0;
-    bottom: 0.75rem;
+    bottom: 0;
     left: 0;
     height: 2px;
     background-color: currentColor;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform var(--duration-medium) var(--ease-out-soft);
+    transition: transform var(--duration-ui) var(--ease-ui);
   }
 
   .nav-links ul li a:hover,

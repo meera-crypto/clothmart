@@ -23,6 +23,11 @@ body {
   margin: 0;
 }
 
+:root {
+  --lh-heading: 1.25;
+  --lh-body: 1.5;
+}
+
 body {
   padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
@@ -47,7 +52,7 @@ body {
   color: var(--c-secondary);
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
-  transition: transform var(--duration-medium) var(--ease-out-soft);
+  transition: transform var(--duration-ui) var(--ease-ui);
 }
 
 .skip-link:focus,
@@ -79,24 +84,31 @@ h1 {
   font-family: var(--font-primary);
   font-size: var(--fs-h1);
   font-weight: var(--fw-regular);
+  line-height: var(--lh-heading);
 }
 h2 {
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   text-align: center;
+  line-height: var(--lh-heading);
 }
 h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-medium);
+  line-height: var(--lh-heading);
 }
 h4 {
   font-size: var(--fs-h4);
   font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
 }
 p,
 span {
   font-size: var(--fs-s);
   font-weight: var(--fw-medium);
+}
+p {
+  line-height: var(--lh-body);
 }
 h1,
 h2,
@@ -116,9 +128,9 @@ del {
 }
 
 a,
-.btn,
 .icon {
-  transition: var(--transition-ui);
+  @include transition-ui;
+  font-weight: var(--fw-medium);
 }
 
 a {
