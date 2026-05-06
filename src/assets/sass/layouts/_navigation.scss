@@ -38,8 +38,7 @@
   transition: color var(--duration-ui) var(--ease-ui);
 }
 
-.mobile-bottom-nav__item:hover,
-.mobile-bottom-nav__item:focus-visible {
+.mobile-bottom-nav__item:hover {
   color: var(--c-secondary);
 }
 
@@ -120,13 +119,11 @@
     transition: transform var(--duration-ui) var(--ease-ui);
   }
 
-  .nav-links ul li a:hover,
-  .nav-links ul li a:focus-visible {
+  .nav-links ul li a:hover {
     color: var(--c-neutral);
   }
 
-  .nav-links ul li a:hover::after,
-  .nav-links ul li a:focus-visible::after {
+  .nav-links ul li a:hover::after {
     transform: scaleX(1);
   }
 

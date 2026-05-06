@@ -60,26 +60,6 @@ body {
   transform: translateY(0);
 }
 
-#main-content:focus {
-  outline: none;
-}
-
-:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset);
-}
-
-.menu :focus-visible,
-.mobile-bottom-nav :focus-visible,
-.footer :focus-visible,
-.skip-link:focus-visible {
-  outline-color: var(--focus-ring-color-inverse);
-}
-
-.category-card__link:focus-visible {
-  outline-color: var(--focus-ring-color-inverse);
-}
-
 h1 {
   font-family: var(--font-primary);
   font-size: var(--fs-h1);

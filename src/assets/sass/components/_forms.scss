@@ -15,16 +15,6 @@
     color: var(--c-black);
   }
 
-  &:focus {
-    box-shadow: none;
-    border-color: var(--c-black);
-  }
-
-  &:focus-visible {
-    outline: var(--focus-ring-width) solid var(--focus-ring-color);
-    outline-offset: var(--focus-ring-offset);
-  }
-
   .disbled {
     background-color: #f1f1f1;
   }
@@ -42,11 +32,6 @@ select {
   background: var(--c-white) url(../../../images/icons/select_icon.png)
     no-repeat center right;
   background-size: 24px auto;
-
-  &:focus-visible {
-    outline: var(--focus-ring-width) solid var(--focus-ring-color);
-    outline-offset: var(--focus-ring-offset);
-  }
 }
 
 .auth-modal .modal-dialog {
@@ -156,13 +141,6 @@ select {
   &:hover {
     color: var(--c-black);
     text-decoration: underline;
-  }
-
-  &:focus-visible {
-    color: var(--c-black);
-    text-decoration: underline;
-    outline: var(--focus-ring-width) solid var(--focus-ring-color);
-    outline-offset: var(--focus-ring-offset);
   }
 }
 

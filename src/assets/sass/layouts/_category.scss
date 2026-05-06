@@ -75,8 +75,7 @@
   transition: var(--transition-photo-zoom);
 }
 
-.category-card:hover img,
-.category-card:focus-within img {
+.category-card:hover img {
   transform: scale(1.06);
 }
 
@@ -126,8 +125,7 @@
       transform, box-shadow;
   }
 
-  .category-card:hover .btn-category,
-  .category-card:focus-within .btn-category {
+  .category-card:hover .btn-category {
     opacity: 1;
     visibility: visible;
   }
