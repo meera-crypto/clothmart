@@ -10,9 +10,12 @@
   <meta name="apple-mobile-web-app-title" content="Clothmart">
   <link rel="icon" href="assets/img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/favicon/favicon.ico">
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="preload" as="style" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  </noscript>
   <link rel="stylesheet" href="assets/css/plugins.min.css" media="all">
   <link rel="stylesheet" href="assets/css/app.min.css" media="all">
   <title>Clothmart</title>
@@ -139,7 +142,7 @@
           <picture>
             <source srcset="/uploads/hero-image.webp, /uploads/hero-image_2x.webp 2x" type="image/webp">
             <source srcset="/uploads/hero-image.jpg, /uploads/hero-image_2x.jpg 2x" type="image/jpeg">
-            <img class="hero__image" src="/uploads/hero-image.jpg" alt="Model wearing Clothmart summer collection" loading="lazy">
+            <img class="hero__image" src="/uploads/hero-image.jpg" alt="Model wearing Clothmart summer collection">
           </picture>
         </div>
       </div>
@@ -151,8 +154,8 @@
         <div class="category-card">
           <a class="category-card__link" href="#">
             <picture>
-              <source srcset="/uploads/mens.webp, /uploads/mens_2x.webp 2x" type="image/webp">
-              <source srcset="/uploads/mens.jpg, /uploads/mens_2x.jpg 2x" type="image/jpeg">
+              <source srcset="/uploads/mens.webp" type="image/webp">
+              <source srcset="/uploads/mens.jpg" type="image/jpeg">
               <img src="/uploads/mens.jpg" alt="Men" width="352" height="449" loading="lazy">
             </picture>
             <div class="category-card__overlay">
@@ -164,8 +167,8 @@
         <div class="category-card">
           <a class="category-card__link" href="#">
             <picture>
-              <source srcset="/uploads/women.webp, /uploads/women_2x.webp 2x" type="image/webp">
-              <source srcset="/uploads/women.jpg, /uploads/women_2x.jpg 2x" type="image/jpeg">
+              <source srcset="/uploads/women.webp" type="image/webp">
+              <source srcset="/uploads/women.jpg" type="image/jpeg">
               <img src="/uploads/women.jpg" alt="Women" width="352" height="449" loading="lazy">
             </picture>
             <div class="category-card__overlay">
@@ -177,8 +180,8 @@
         <div class="category-card">
           <a class="category-card__link" href="#">
             <picture>
-              <source srcset="/uploads/kids.webp, /uploads/kids_2x.webp 2x" type="image/webp">
-              <source srcset="/uploads/kids.jpg, /uploads/kids_2x.jpg 2x" type="image/jpeg">
+              <source srcset="/uploads/kids.webp" type="image/webp">
+              <source srcset="/uploads/kids.jpg" type="image/jpeg">
               <img src="/uploads/kids.jpg" alt="Kids" width="352" height="449" loading="lazy">
             </picture>
             <div class="category-card__overlay">
@@ -216,8 +219,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-hoodie.webp, /uploads/lp-hoodie_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-hoodie.jpg, /uploads/lp-hoodie_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-hoodie.webp" type="image/webp">
+                <source srcset="/uploads/lp-hoodie.jpg" type="image/jpeg">
                 <img src="/uploads/lp-hoodie.jpg" alt="Hoodie" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add hoodie to wishlist">
@@ -243,8 +246,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-jean-blue.webp, /uploads/lp-jean-blue_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-jean-blue.jpg, /uploads/lp-jean-blue_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-jean-blue.webp" type="image/webp">
+                <source srcset="/uploads/lp-jean-blue.jpg" type="image/jpeg">
                 <img src="/uploads/lp-jean-blue.jpg" alt="Blue jean" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add blue jean to wishlist">
@@ -270,8 +273,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-jean-black.webp, /uploads/lp-jean-black_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-jean-black.jpg, /uploads/lp-jean-black_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-jean-black.webp" type="image/webp">
+                <source srcset="/uploads/lp-jean-black.jpg" type="image/jpeg">
                 <img src="/uploads/lp-jean-black.jpg" alt="Black jean" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add black jean to wishlist">
@@ -297,8 +300,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-tshirt.webp, /uploads/lp-tshirt_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-tshirt.jpg, /uploads/lp-tshirt_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-tshirt.webp" type="image/webp">
+                <source srcset="/uploads/lp-tshirt.jpg" type="image/jpeg">
                 <img src="/uploads/lp-tshirt.jpg" alt="T-shirt" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add t-shirt to wishlist">
@@ -324,8 +327,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-shirt-black.webp, /uploads/lp-shirt-blac_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-shirt-black.jpg, /uploads/lp-shirt-blac_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-shirt-black.webp" type="image/webp">
+                <source srcset="/uploads/lp-shirt-black.jpg" type="image/jpeg">
                 <img src="/uploads/lp-shirt-black.jpg" alt="Black shirt" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add black shirt to wishlist">
@@ -351,8 +354,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-shirt-stripe.webp, /uploads/lp-shirt-stripe_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-shirt-stripe.jpg, /uploads/lp-shirt-stripe_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-shirt-stripe.webp" type="image/webp">
+                <source srcset="/uploads/lp-shirt-stripe.jpg" type="image/jpeg">
                 <img src="/uploads/lp-shirt-stripe.jpg" alt="Striped shirt" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add striped shirt to wishlist">
@@ -378,8 +381,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-dress.webp, /uploads/lp-dress_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-dress.jpg, /uploads/lp-dress_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-dress.webp" type="image/webp">
+                <source srcset="/uploads/lp-dress.jpg" type="image/jpeg">
                 <img src="/uploads/lp-dress.jpg" alt="Dress" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add dress to wishlist">
@@ -405,8 +408,8 @@
           <article class="product-card">
             <div class="product-card__media">
               <picture>
-                <source srcset="/uploads/lp-tshirt-green.webp, /uploads/lp-tshirt-green_2x.webp 2x" type="image/webp">
-                <source srcset="/uploads/lp-tshirt-green.jpg, /uploads/lp-tshirt-green_2x.jpg 2x" type="image/jpeg">
+                <source srcset="/uploads/lp-tshirt-green.webp" type="image/webp">
+                <source srcset="/uploads/lp-tshirt-green.jpg" type="image/jpeg">
                 <img src="/uploads/lp-tshirt-green.jpg" alt="Green t-shirt" width="256" height="336" loading="lazy">
               </picture>
               <button class="product-card__favorite" type="button" aria-label="Add green t-shirt to wishlist">
@@ -465,8 +468,8 @@
       <div class="banner-content">
         <div class="banner-media">
           <picture>
-            <source srcset="/uploads/banner-sale.webp, /uploads/banner-sale_2x.webp 2x" type="image/webp">
-            <source srcset="/uploads/banner-sale.jpg, /uploads/banner-sale_2x.jpg 2x" type="image/jpeg">
+            <source srcset="/uploads/banner-sale.webp" type="image/webp">
+            <source srcset="/uploads/banner-sale.jpg" type="image/jpeg">
             <img src="/uploads/banner-sale.jpg" alt="Summer product limited offer" loading="lazy">
           </picture>
         </div>
@@ -780,9 +783,5 @@
   </div>
 </div>
 <script defer="defer" src="assets/js/jquery.min.js"></script>
-<script defer="defer" src="assets/js/plugins.min.js"></script>
 <script defer="defer" src="assets/js/app.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

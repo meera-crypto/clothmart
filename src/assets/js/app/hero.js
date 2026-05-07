@@ -1,22 +1,21 @@
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+(function () {
+  if (typeof Swiper === "undefined") return;
+  if (!document.querySelector(".swiper")) return;
 
+  new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
       768: {
-        navigation: false
-      }
-    }
-});
+        navigation: false,
+      },
+    },
+  });
+})();
