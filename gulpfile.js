@@ -93,27 +93,6 @@ function app_js() {
     .pipe(gulp.dest("dist/assets/js"));
 }
 
-function plugins_js() {
-  return gulp
-    .src("src/assets/js/plugins.js")
-    .pipe(include())
-    .on("error", console.log)
-    .pipe(concat("plugins.min.js"))
-    .pipe(
-      gulpIf(
-        isProd,
-        uglify({
-          keep_fnames: true,
-          mangle: false,
-          ie8: true,
-          warnings: true,
-          compress: true,
-        }),
-      ),
-    )
-    .pipe(gulp.dest("dist/assets/js"));
-}
-
 function jquery_js() {
   return gulp
     .src("src/assets/js/jquery.js")
@@ -147,7 +126,7 @@ function uploads() {
 function img_webp() {
   return gulp
     .src("src/assets/img/**/*")
-    .pipe(webp({ quality: 100 }))
+    .pipe(webp({ quality: 75 }))
     .pipe(gulpIf(isProd, imagemin()))
     .pipe(gulp.dest("dist/assets/img/"));
 }
@@ -155,7 +134,7 @@ function img_webp() {
 function uploads_webp() {
   return gulp
     .src("src/uploads/**/*")
-    .pipe(webp({ quality: 100 }))
+    .pipe(webp({ quality: 75 }))
     .pipe(gulpIf(isProd, imagemin()))
     .pipe(gulp.dest("dist/uploads/"));
 }
@@ -192,10 +171,6 @@ function watchFiles() {
   );
 
   gulp.watch("src/assets/js/**/*.js", gulp.series(app_js, browserSyncReload));
-  gulp.watch(
-    "src/assets/js/**/*.js",
-    gulp.series(plugins_js, browserSyncReload),
-  );
   gulp.watch("src/assets/img/**/*.*", gulp.series(img));
   gulp.watch("src/uploads/**/*.*", gulp.series(uploads));
   gulp.watch("src/assets/img/**/*.*", gulp.series(img_webp));
@@ -213,7 +188,6 @@ exports.app_css = app_css;
 exports.plugins_css = plugins_css;
 exports.app_js = app_js;
 exports.jquery_js = jquery_js;
-exports.plugins_js = plugins_js;
 exports.fonts = fonts;
 exports.site_files = site_files;
 
@@ -224,7 +198,6 @@ exports.serve = gulp.parallel(
   plugins_css,
   jquery_js,
   app_js,
-  plugins_js,
   fonts,
   img,
   uploads,
@@ -241,7 +214,6 @@ exports.default = gulp.series(
   plugins_css,
   jquery_js,
   app_js,
-  plugins_js,
   fonts,
   img,
   uploads,
